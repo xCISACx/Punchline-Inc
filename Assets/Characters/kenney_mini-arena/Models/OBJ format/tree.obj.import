@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cfhypmhe3cylo"
+path="res://.godot/imported/tree.obj-382cb1753eaa709560c609ba4d17ac80.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tree.obj-382cb1753eaa709560c609ba4d17ac80.mesh"]
+
+source_file="res://Assets/Characters/kenney_mini-arena/Models/OBJ format/tree.obj"
+dest_files=["res://.godot/imported/tree.obj-382cb1753eaa709560c609ba4d17ac80.mesh", "res://.godot/imported/tree.obj-382cb1753eaa709560c609ba4d17ac80.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

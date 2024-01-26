@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dactblop6cdwf"
+path="res://.godot/imported/block.obj-eac9e91e117c46d958c477df67a1c57a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/block.obj-eac9e91e117c46d958c477df67a1c57a.mesh"]
+
+source_file="res://Assets/Characters/kenney_mini-arena/Models/OBJ format/block.obj"
+dest_files=["res://.godot/imported/block.obj-eac9e91e117c46d958c477df67a1c57a.mesh", "res://.godot/imported/block.obj-eac9e91e117c46d958c477df67a1c57a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

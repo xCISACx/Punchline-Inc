@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dokqq6n1fjlnk"
+path="res://.godot/imported/stairs-corner-inner.obj-5c09e47f837f47d5024a8dfd19122dca.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stairs-corner-inner.obj-5c09e47f837f47d5024a8dfd19122dca.mesh"]
+
+source_file="res://Assets/Characters/kenney_mini-arena/Models/OBJ format/stairs-corner-inner.obj"
+dest_files=["res://.godot/imported/stairs-corner-inner.obj-5c09e47f837f47d5024a8dfd19122dca.mesh", "res://.godot/imported/stairs-corner-inner.obj-5c09e47f837f47d5024a8dfd19122dca.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
