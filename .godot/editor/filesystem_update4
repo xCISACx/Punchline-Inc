@@ -3,4 +3,11 @@ res://Scenes/conveyor.tscn
 res://Scenes/box.tscn
 res://Scenes/main.tscn
 res://Scenes/character.tscn
+<<<<<<< Updated upstream
 res://Scenes/movable_object.gd
+=======
+res://Scenes/player.tscn
+res://Scenes/test.tscn
+res://Scenes/player.gd
+res://Scenes/player2.tscn
+>>>>>>> Stashed changes
