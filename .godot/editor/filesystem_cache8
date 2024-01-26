@@ -1,3 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1706298078
+::res://::1706298519
 icon.svg::CompressedTexture2D::7650057786587191090::1706298050::1706298050::1::::<><>::
+::res://Assets/::1706298519
+::res://Assets/Characters/::1706298484
+::res://Assets/Fonts/::1706298491
+::res://Assets/Icons/::1706298496
+::res://Assets/Images/::1706298397
+::res://Assets/Particles/::1706298507
+::res://Assets/Sounds/::1706298393
+::res://Scenes/::1706298185
+character.tscn::PackedScene::5405201398891274100::1706298185::0::1::::<><>::
+::res://Scripts/::1706298404
+::res://Shaders/::1706298409
