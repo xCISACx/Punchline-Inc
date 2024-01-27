@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 CollisionShape3D
 Area3D
 MeshInstance3D
@@ -8,5 +9,19 @@ Node3D
 CharacterBody3D
 StaticBody3D
 DirectionalLight3D
+=======
+StaticBody3D
+Generic6DOFJoint3D
+Camera3D
+MeshInstance3D
+CollisionShape3D
+>>>>>>> Stashed changes
 RigidBody3D
-SubViewport
+RayCast3D
+Area3D
+Marker3D
+PhysicalBone3D
+Skeleton3D
+AnimationPlayer
+DirectionalLight3D
+Node3D

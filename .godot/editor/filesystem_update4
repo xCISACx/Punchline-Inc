@@ -1,6 +1,19 @@
+<<<<<<< Updated upstream
 res://Scenes/conveyor.gd
+=======
+>>>>>>> Stashed changes
 res://Scenes/conveyor.tscn
 res://Scenes/box.tscn
+<<<<<<< Updated upstream
 res://Scenes/main.tscn
 res://Scenes/character.tscn
+=======
+res://Scenes/player.tscn
+res://Scenes/testscene.tscn
+res://Scenes/player.gd
+res://Scenes/rag_doll.tscn
+res://Scenes/item_detection.tscn
+res://Scenes/item_detection.gd
+res://Scenes/boxpickable.tscn
+>>>>>>> Stashed changes
 res://Scenes/movable_object.gd

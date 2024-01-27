@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1exohwlsop8v"]
+
+[ext_resource type="PackedScene" uid="uid://catwdoeecu8bw" path="res://Scenes/player.tscn" id="1_ympra"]
+[ext_resource type="PackedScene" uid="uid://smggq4xajc0" path="res://Scenes/boxpickable.tscn" id="2_h7kyw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nscvx"]
+size = Vector3(0.25, 0.25, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cjn2k"]
+size = Vector3(0.25, 0.25, 0.25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ho4y"]
+size = Vector3(60, 1, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6yrtf"]
+size = Vector3(60, 1, 60)
+
+[node name="Test" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0116655, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.029422, 0.999567, 0, -0.999567, -0.029422, 0, 2.29105, 0)
+
+[node name="Player" parent="." instance=ExtResource("1_ympra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.84709, 0)
+
+[node name="Box" parent="." instance=ExtResource("2_h7kyw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0447, 6.45597)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.20084, -5.55146)
+collision_layer = 4
+collision_mask = 5
+mass = 0.05
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.110291, 0, 0)
+shape = SubResource("BoxShape3D_nscvx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_cjn2k")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_5ho4y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_6yrtf")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.948456, 0.316907, 0, -0.316907, 0.948456, 0, 3.24256, 9.74549)

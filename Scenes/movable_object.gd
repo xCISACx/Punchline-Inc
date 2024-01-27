@@ -13,6 +13,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+<<<<<<< Updated upstream
 	if current_conveyor:
 		if is_same_direction(direction, Vector3.ZERO):
 				direction = current_conveyor.direction
@@ -28,6 +29,9 @@ func _process(_delta):
 			#', target_marker: ' + str(target_marker_owner) +
 			#'\n-------------------------------------------------'
 		#)
+=======
+	#print(str(moving) + ', ' + str(direction) + ', ' + str(movement_speed))
+>>>>>>> Stashed changes
 	pass
 	
 func _physics_process(delta):
