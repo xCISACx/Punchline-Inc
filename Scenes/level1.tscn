@@ -1,0 +1,213 @@
+[gd_scene load_steps=16 format=3 uid="uid://cpe5jttgrcodt"]
+
+[ext_resource type="Script" path="res://Scenes/level1.gd" id="1_7an04"]
+[ext_resource type="PackedScene" uid="uid://bqpwe2xp6ilu3" path="res://Assets/World/room.glb" id="1_eptot"]
+[ext_resource type="PackedScene" uid="uid://bnc5vqjarvlwt" path="res://Scenes/player1.tscn" id="2_ey6hc"]
+[ext_resource type="PackedScene" uid="uid://dtixs26warhmk" path="res://Assets/World/room (1).glb" id="2_vqitv"]
+[ext_resource type="PackedScene" uid="uid://fhjds856yo2s" path="res://Assets/World/conveyor_belt (1).glb" id="3_lbvlj"]
+[ext_resource type="PackedScene" uid="uid://bc2po731loyp4" path="res://Assets/World/cb_curved.glb" id="4_jnh0f"]
+[ext_resource type="PackedScene" uid="uid://debj5gi2h341s" path="res://Scenes/conveyor.tscn" id="5_dijax"]
+[ext_resource type="PackedScene" uid="uid://vkgi816ih4i5" path="res://Scenes/box.tscn" id="6_ti7t6"]
+[ext_resource type="PackedScene" uid="uid://uf366rv657r5" path="res://Scenes/playerfat.tscn" id="10_wal5f"]
+[ext_resource type="PackedScene" uid="uid://d3fg18fe0ib4n" path="res://Scenes/player2.tscn" id="11_fkbkg"]
+[ext_resource type="PackedScene" uid="uid://5131o4723smh" path="res://Scenes/playerfat2.tscn" id="11_n0bib"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xofcm"]
+size = Vector3(40, 1, 40)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fn1vt"]
+size = Vector3(40, 1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gyh82"]
+size = Vector3(1, 39.3602, 38.1467)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p85dc"]
+size = Vector3(1.12842, 1, 1.74078)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_7an04")
+
+[node name="room" parent="." instance=ExtResource("1_eptot")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1.48865, 0, 1, 0, 1.19249e-08, -123.386, 8.13001, -16.3542)
+
+[node name="room (1)" parent="." instance=ExtResource("2_vqitv")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 6, -15)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_xofcm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_fn1vt")
+
+[node name="Player" parent="." instance=ExtResource("2_ey6hc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.07636, 6.36508, 1.63889)
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38995, -0.463122)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.745092, 0.666962, 0, -0.666962, 0.745092, -3.00545, 21.7797, 21.3544)
+fov = 50.0
+size = 20.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.99688, 0.0789289, 0, -0.0789289, -0.99688, 0, 0, 0, 1, -5.34007, 27.1969, 0)
+
+[node name="conveyor_belt (1)" parent="." instance=ExtResource("3_lbvlj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12.2923, 1.5, 10.7206)
+
+[node name="conveyor_belt (1)2" parent="." instance=ExtResource("3_lbvlj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.872, 1.5, 10.7202)
+
+[node name="conveyor_belt (1)3" parent="." instance=ExtResource("3_lbvlj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.205, 1.5, 10.7202)
+
+[node name="conveyor_belt (1)4" parent="." instance=ExtResource("3_lbvlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29547, 1.5, 6.3652)
+
+[node name="cb_curved" parent="." instance=ExtResource("4_jnh0f")]
+transform = Transform3D(0.0402015, 0, 0.999192, 0, 1, 0, -0.999192, 0, 0.0402015, 1.232, 1.5, 10.9897)
+
+[node name="cb_curved2" parent="." instance=ExtResource("4_jnh0f")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.23931, 1.5, 2.28205)
+
+[node name="cb_curved3" parent="." instance=ExtResource("4_jnh0f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.61458, 1.5, -6.084)
+
+[node name="Conveyor" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -13.6954, 2.48121, 10.7233)
+visible = false
+
+[node name="Conveyor2" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -12.6954, 2.48121, 10.7233)
+visible = false
+
+[node name="Conveyor3" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -11.6954, 2.48121, 10.7233)
+visible = false
+
+[node name="Conveyor4" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -10.6954, 2.48121, 10.7233)
+visible = false
+
+[node name="Conveyor5" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -9.69544, 2.48121, 10.7233)
+visible = false
+
+[node name="Conveyor6" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -8.69544, 2.48121, 10.7233)
+visible = false
+
+[node name="Conveyor7" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -7.69544, 2.48121, 10.7233)
+visible = false
+
+[node name="Conveyor8" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -6.69544, 2.48121, 10.7233)
+visible = false
+
+[node name="Conveyor9" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -5.69544, 2.48121, 10.7233)
+visible = false
+
+[node name="Conveyor10" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -4.69544, 2.48121, 10.7233)
+visible = false
+
+[node name="Conveyor11" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -3.61634, 2.48121, 10.7233)
+visible = false
+
+[node name="Conveyor12" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -2.69544, 2.48121, 10.7233)
+visible = false
+
+[node name="Conveyor13" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -1.69544, 2.48121, 10.7233)
+visible = false
+
+[node name="Conveyor14" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -0.695439, 2.48121, 10.7233)
+
+[node name="Conveyor15" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-0.754595, 0, 0.656191, 0, 1.48865, 0, -0.656191, 0, -0.754595, 0.304561, 2.48121, 10.7233)
+
+[node name="Conveyor16" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-0.866025, 0, 0.5, 0, 1.48865, 0, -0.5, 0, -0.866025, 0.949394, 2.48121, 9.90254)
+
+[node name="Conveyor17" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, 1.22327, 2.48121, 8.89321)
+
+[node name="Conveyor18" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, 1.22327, 2.48121, 7.89929)
+
+[node name="Conveyor19" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, 1.22327, 2.48121, 6.93165)
+
+[node name="Conveyor20" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, 1.22327, 2.48121, 5.93494)
+
+[node name="Conveyor21" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, 1.22327, 2.48121, 4.93562)
+
+[node name="Conveyor22" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, 1.22327, 2.48121, 3.94831)
+
+[node name="Box" parent="." instance=ExtResource("6_ti7t6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 4, 5.95898)
+
+[node name="LeftWall" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.036, 9.73716, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LeftWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82411, -0.787109, 1.67524)
+shape = SubResource("BoxShape3D_gyh82")
+
+[node name="BackWall" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.80236, 11.1933, -12.6104)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BackWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82411, -0.787109, 1.67524)
+shape = SubResource("BoxShape3D_gyh82")
+
+[node name="FrontWall" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.80236, 11.1933, 15.89)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FrontWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82411, -0.787109, 1.67524)
+shape = SubResource("BoxShape3D_gyh82")
+
+[node name="RightWall" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.34698, 9.73716, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82411, -0.787109, 1.67524)
+shape = SubResource("BoxShape3D_gyh82")
+
+[node name="Ceiling" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -3.57715, 15.2934, -2.61333)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82411, -2.71149, 4.18309)
+shape = SubResource("BoxShape3D_gyh82")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.69427, 3.18968, -12.8902)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -1.95595, -0.695143, 0.0760307)
+shape = SubResource("BoxShape3D_p85dc")
+
+[node name="Player3" parent="." instance=ExtResource("10_wal5f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57349, 5.81562, 3.33167)
+
+[node name="Player4" parent="." instance=ExtResource("11_n0bib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.78258, 0)
+
+[node name="Player2" parent="." instance=ExtResource("11_fkbkg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.19668, 4.75213)
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

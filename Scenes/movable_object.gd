@@ -34,6 +34,7 @@ func _process(_delta):
 func _physics_process(delta):
 	if current_conveyor && moving:
 		move_towards_target(delta)
+		#move_and_collide()
 		
 func move_towards_target(delta):
 	target_point = current_conveyor.target.global_position
