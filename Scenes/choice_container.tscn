@@ -9,84 +9,119 @@ theme_override_constants/separation = 20
 [node name="ChoicePromptContainer1" type="HBoxContainer" parent="ChoiceContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="ChoiceContainer/ChoicePromptContainer1"]
-custom_minimum_size = Vector2(100, 50)
+[node name="Panel" type="Panel" parent="ChoiceContainer/ChoicePromptContainer1"]
+custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-text = "test 1"
+
+[node name="Label" type="Label" parent="ChoiceContainer/ChoicePromptContainer1/Panel"]
+layout_mode = 2
+offset_right = 150.0
+offset_bottom = 50.0
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="ChoicePrompt" type="Button" parent="ChoiceContainer/ChoicePromptContainer1"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+disabled = true
 text = "1"
 
 [node name="ChoicePromptContainer2" type="HBoxContainer" parent="ChoiceContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="ChoiceContainer/ChoicePromptContainer2"]
-custom_minimum_size = Vector2(100, 50)
+[node name="Panel" type="Panel" parent="ChoiceContainer/ChoicePromptContainer2"]
+custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-text = "test 2"
+
+[node name="Label" type="Label" parent="ChoiceContainer/ChoicePromptContainer2/Panel"]
+layout_mode = 2
+offset_right = 150.0
+offset_bottom = 50.0
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="ChoicePrompt" type="Button" parent="ChoiceContainer/ChoicePromptContainer2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+disabled = true
 text = "2"
 
 [node name="ChoicePromptContainer3" type="HBoxContainer" parent="ChoiceContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="ChoiceContainer/ChoicePromptContainer3"]
-custom_minimum_size = Vector2(100, 50)
+[node name="Panel" type="Panel" parent="ChoiceContainer/ChoicePromptContainer3"]
+custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-text = "test 3"
+
+[node name="Label" type="Label" parent="ChoiceContainer/ChoicePromptContainer3/Panel"]
+layout_mode = 2
+offset_right = 150.0
+offset_bottom = 50.0
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="ChoicePrompt" type="Button" parent="ChoiceContainer/ChoicePromptContainer3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+disabled = true
 text = "3"
 
 [node name="ChoicePromptContainer4" type="HBoxContainer" parent="ChoiceContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="ChoiceContainer/ChoicePromptContainer4"]
-custom_minimum_size = Vector2(100, 50)
+[node name="Panel" type="Panel" parent="ChoiceContainer/ChoicePromptContainer4"]
+custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-text = "test 4"
+
+[node name="Label" type="Label" parent="ChoiceContainer/ChoicePromptContainer4/Panel"]
+layout_mode = 2
+offset_right = 150.0
+offset_bottom = 50.0
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="ChoicePrompt" type="Button" parent="ChoiceContainer/ChoicePromptContainer4"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+disabled = true
 text = "4"
 
 [node name="ChoicePromptContainer5" type="HBoxContainer" parent="ChoiceContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="ChoiceContainer/ChoicePromptContainer5"]
-custom_minimum_size = Vector2(100, 50)
+[node name="Panel" type="Panel" parent="ChoiceContainer/ChoicePromptContainer5"]
+custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-text = "test 5"
+
+[node name="Label" type="Label" parent="ChoiceContainer/ChoicePromptContainer5/Panel"]
+layout_mode = 2
+offset_right = 150.0
+offset_bottom = 50.0
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="ChoicePrompt" type="Button" parent="ChoiceContainer/ChoicePromptContainer5"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+disabled = true
 text = "5"

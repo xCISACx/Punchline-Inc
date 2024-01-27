@@ -1,11 +1,11 @@
-Label
-VBoxContainer
 Panel
+Label
+Node3D
 HBoxContainer
+VBoxContainer
 Button
 TextEdit
 Control
-Node3D
 CollisionShape3D
 Area3D
 MeshInstance3D

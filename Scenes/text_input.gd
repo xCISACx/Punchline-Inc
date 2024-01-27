@@ -7,6 +7,8 @@ var choices_made = false
 @export var player_choices : Array[String] = ["", "", ""]
 var all_player_keys = ["1", "2", "3", "4", "5", "Z", "X", "C", "V", "B", "Y", "U", "I", "O", "P"]
 
+@export var czar_id : int
+@export var participating_player_ids : Array[int] = [0, 1, 2, 3]
 @export var text_edit : TextEdit
 @export var submitted_text : Label
 @export var main_joke_container : VBoxContainer
@@ -17,16 +19,64 @@ var all_player_keys = ["1", "2", "3", "4", "5", "Z", "X", "C", "V", "B", "Y", "U
 @export var answer_card_container : HBoxContainer
 @export var winning_player_label : Label
 @export var winner_label : Label
+@export var player_labels_container : HBoxContainer
+
+@export var player_list : Array[Node]
+
+@export var word_list : Array[String]
+@export var used_words_list : Array[String]
+@export_file("*.txt") var words
 
 var winner_id
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	randomize()
+	initialise()
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
+func create_word_list():
+	var f = FileAccess.open(words, FileAccess.READ)
+	var index = 0
+	while not f.eof_reached():
+		var line = f.get_line()
+		word_list.append(line)
+		index += 1
+	f.close()
+	
+func populate_submission_buttons():
+	var card_container_path = get_path_to(card_container)
+	
+	for i in range(participating_player_ids.size()):
+		var player_index = participating_player_ids[i]
+		for j in range(1, 6):  # Adjust the range to include 1 to 5
+			print(str(card_container_path) + "/ChoiceContainer" + str(i + 1) + "/ChoiceContainer/ChoicePromptContainer" + str(j) + "/Panel/Label")
+			var label = get_node(str(card_container_path) + "/ChoiceContainer" + str(i + 1) + "/ChoiceContainer/ChoicePromptContainer" + str(j) + "/Panel/Label")
+			if label:
+				label.text = player_list[player_index].collected_words[j - 1]
+	
+func initialise():
+	create_word_list()
+	for player in player_list:
+		player.generate_words()
+	print(word_list)
+	participating_player_ids = [0, 1, 2, 3]
+	czar_id = randi_range(0, 3)
+	participating_player_ids.erase(czar_id)
+	var answer_card_container_path = get_path_to(answer_card_container)
+	
+	for i in 3:
+		get_node(str(answer_card_container_path) + "/Button" + str(i + 1) + "/").player_id = participating_player_ids[i]
+	
+	for i in player_labels_container.get_child_count():
+		var label = player_labels_container.get_child(i)
+		label.text = str(participating_player_ids[i] + 1)
+		
+	populate_submission_buttons()
 
 func _on_text_edit_text_changed():
 	original_text = text_edit.text
@@ -37,18 +87,14 @@ func _on_submit_button_pressed():
 		text_edit.editable = false
 		submitted_text.text = current_text
 		joke_container.hide()
-		submitted_text.get_parent().show()
+		submission_container.show()
 		card_container.show()
 		winning_player_label.show()
 
 func word_button_pressed(button, text):
 	submitted_text.text = original_text
-	print(text)
-	print(original_text)
 	var new_text = submitted_text.text.replace("_", text)
 	submitted_text.text = new_text
-	print(new_text)
-	print(submitted_text)
 	winner_id = button.player_id
 	winning_player_label.text = "Player " + str(button.player_id + 1) + " is going to win this round."
  
@@ -102,6 +148,7 @@ func _input(event):
 			for player_id in player_key_mapping.keys():
 				if pressed_key in player_key_mapping[player_id]:
 					print("Player ID:", player_id)
+					player_id = participating_player_ids[player_id]
 					handle_player_input(player_id, pressed_key)
 					break
 
@@ -110,7 +157,7 @@ func handle_player_input(player_id, key):
 		
 func player_choice_pressed(player_id, choice_index):
 	#print(choice_index)
-	var node_path = "Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer" + str(player_id + 1) + "/ChoiceContainer" + "/ChoicePromptContainer" + str(choice_index + 1) + "/Button"
+	var node_path = "Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer" + str(player_id + 1) + "/ChoiceContainer" + "/ChoicePromptContainer" + str(choice_index + 1) + "/Panel/Label"
 	#print("$Control/CardContainer/ChoiceContainer" + str(player_id + 1) + "/ChoiceContainer" + "/ChoicePromptContainer" + str(choice_index + 1) + "/Button")
 	var choice = get_node(node_path)
 	player_choices[player_id] = str(choice.text)

@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bq785l1wmksxa"]
+[gd_scene load_steps=7 format=3 uid="uid://bq785l1wmksxa"]
 
 [ext_resource type="Script" path="res://Scenes/text_input.gd" id="1_ac7mt"]
 [ext_resource type="PackedScene" uid="uid://bci2a2davas7d" path="res://Scenes/choice_container.tscn" id="2_ivlqh"]
 [ext_resource type="Script" path="res://Scenes/answer_card_button.gd" id="3_5dswh"]
+[ext_resource type="Script" path="res://Assets/Scripts/dummy_player.gd" id="4_nhsuu"]
+
+[sub_resource type="Shortcut" id="Shortcut_x8agt"]
+events = [null]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxqen"]
 bg_color = Color(0.168627, 0.478431, 0.627451, 1)
 
-[node name="TextInput" type="Node3D" node_paths=PackedStringArray("text_edit", "submitted_text", "main_joke_container", "joke_container", "card_container", "submission_container", "main_answer_card_container", "answer_card_container", "winning_player_label", "winner_label")]
+[node name="TextInput" type="Node3D" node_paths=PackedStringArray("text_edit", "submitted_text", "main_joke_container", "joke_container", "card_container", "submission_container", "main_answer_card_container", "answer_card_container", "winning_player_label", "winner_label", "player_labels_container", "player_list")]
 script = ExtResource("1_ac7mt")
 text_edit = NodePath("Control/MainJokeContainer/JokeContainer/TextEdit")
 submitted_text = NodePath("Control/MainJokeContainer/SubmissionContainer/SubmittedTextPanel/SubmittedText")
@@ -19,6 +23,9 @@ main_answer_card_container = NodePath("Control/MainJokeContainer/AnswerCardMainC
 answer_card_container = NodePath("Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer")
 winning_player_label = NodePath("Control/MainJokeContainer/AnswerCardMainContainer/WinningPlayerLabel")
 winner_label = NodePath("Control/WinnerLabel")
+player_labels_container = NodePath("Control/MainJokeContainer/SubmissionContainer/PlayerLabelsContainer")
+player_list = [NodePath("Node3D"), NodePath("Node3D2"), NodePath("Node3D3"), NodePath("Node3D4")]
+words = "res://Assets/Scripts/my_words.txt"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -61,14 +68,15 @@ scroll_fit_content_height = true
 [node name="SubmitButton" type="Button" parent="Control/MainJokeContainer/JokeContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
+shortcut = SubResource("Shortcut_x8agt")
 text = "SUBMIT"
 
 [node name="SubmissionContainer" type="VBoxContainer" parent="Control/MainJokeContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 20
 
 [node name="SubmittedTextPanel" type="Panel" parent="Control/MainJokeContainer/SubmissionContainer"]
-visible = false
 custom_minimum_size = Vector2(500, 230)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jxqen")
@@ -84,29 +92,30 @@ theme_override_font_sizes/font_size = 20
 text = "Submited Joke"
 autowrap_mode = 3
 
+[node name="PlayerLabelsContainer" type="HBoxContainer" parent="Control/MainJokeContainer/SubmissionContainer"]
+layout_mode = 2
+theme_override_constants/separation = 160
+alignment = 1
+
+[node name="Label1" type="Label" parent="Control/MainJokeContainer/SubmissionContainer/PlayerLabelsContainer"]
+layout_mode = 2
+text = "1"
+
+[node name="Label2" type="Label" parent="Control/MainJokeContainer/SubmissionContainer/PlayerLabelsContainer"]
+layout_mode = 2
+text = "2"
+
+[node name="Label3" type="Label" parent="Control/MainJokeContainer/SubmissionContainer/PlayerLabelsContainer"]
+layout_mode = 2
+text = "3"
+
 [node name="CardContainer" type="HBoxContainer" parent="Control/MainJokeContainer/SubmissionContainer"]
-visible = false
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
 [node name="ChoiceContainer1" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer" instance=ExtResource("2_ivlqh")]
 layout_mode = 2
-
-[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer1/ChoiceContainer/ChoicePromptContainer1" index="0"]
-text = "player 1 test 1"
-
-[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer1/ChoiceContainer/ChoicePromptContainer2" index="0"]
-text = "player 1 test 2"
-
-[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer1/ChoiceContainer/ChoicePromptContainer3" index="0"]
-text = "player 1 test 3"
-
-[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer1/ChoiceContainer/ChoicePromptContainer4" index="0"]
-text = "player 1 test 4"
-
-[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer1/ChoiceContainer/ChoicePromptContainer5" index="0"]
-text = "player 1 test 5"
 
 [node name="Button1" type="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer"]
 visible = false
@@ -119,32 +128,17 @@ text = "test 1"
 [node name="ChoiceContainer2" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer" instance=ExtResource("2_ivlqh")]
 layout_mode = 2
 
-[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer1" index="0"]
-text = "player 2 test 1"
-
 [node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer1" index="1"]
 text = "Z"
-
-[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer2" index="0"]
-text = "player 2 test 2"
 
 [node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer2" index="1"]
 text = "X"
 
-[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer3" index="0"]
-text = "player 2 test 3"
-
 [node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer3" index="1"]
 text = "C"
 
-[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer4" index="0"]
-text = "player 2 test 4"
-
 [node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer4" index="1"]
 text = "V"
-
-[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer5" index="0"]
-text = "player 2 test 5"
 
 [node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer5" index="1"]
 text = "B"
@@ -160,32 +154,17 @@ text = "test 2"
 [node name="ChoiceContainer3" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer" instance=ExtResource("2_ivlqh")]
 layout_mode = 2
 
-[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer1" index="0"]
-text = "player 3 test 1"
-
 [node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer1" index="1"]
 text = "Y"
-
-[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer2" index="0"]
-text = "player 3 test 2"
 
 [node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer2" index="1"]
 text = "U"
 
-[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer3" index="0"]
-text = "player 3 test 3"
-
 [node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer3" index="1"]
 text = "I"
 
-[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer4" index="0"]
-text = "player 3 test 4"
-
 [node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer4" index="1"]
 text = "O"
-
-[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer5" index="0"]
-text = "player 3 test 5"
 
 [node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer5" index="1"]
 text = "P"
@@ -311,6 +290,18 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 80
 text = "PLAYER X WINS!"
 horizontal_alignment = 1
+
+[node name="Node3D" type="Node3D" parent="."]
+script = ExtResource("4_nhsuu")
+
+[node name="Node3D2" type="Node3D" parent="."]
+script = ExtResource("4_nhsuu")
+
+[node name="Node3D3" type="Node3D" parent="."]
+script = ExtResource("4_nhsuu")
+
+[node name="Node3D4" type="Node3D" parent="."]
+script = ExtResource("4_nhsuu")
 
 [connection signal="text_changed" from="Control/MainJokeContainer/JokeContainer/TextEdit" to="." method="_on_text_edit_text_changed"]
 [connection signal="pressed" from="Control/MainJokeContainer/JokeContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
