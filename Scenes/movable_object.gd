@@ -1,5 +1,6 @@
 extends RigidBody3D
 
+
 var moving = false
 var direction
 var movement_speed = 2

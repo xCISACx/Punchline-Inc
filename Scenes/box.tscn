@@ -3,26 +3,28 @@
 [ext_resource type="Script" path="res://Scenes/movable_object.gd" id="1_gi000"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nlrn1"]
-size = Vector3(0.2, 0.2, 0.2)
+size = Vector3(0.2, 0.5, 0.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fdaar"]
-size = Vector3(0.2, 0.2, 0.2)
+size = Vector3(0.2, 0.05, 0.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j27c6"]
 size = Vector3(0.25, 0.25, 0.25)
 
 [node name="Box" type="RigidBody3D" groups=["Movable"]]
-collision_layer = 4
+collision_layer = 5
 collision_mask = 7
 freeze_mode = 1
 continuous_cd = true
 script = ExtResource("1_gi000")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.106886, 0, 0, 0, 1, 0, 0.0191223, 0)
 mesh = SubResource("BoxMesh_nlrn1")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0188465, 0)
 shape = SubResource("BoxShape3D_fdaar")
 
 [node name="Area3D" type="Area3D" parent="."]

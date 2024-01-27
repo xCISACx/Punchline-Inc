@@ -1,6 +1,8 @@
-res://Scenes/conveyor.gd
+res://Scenes/player2scene.tscn
+res://Scenes/player2script.gd
+res://Scenes/character.tscn
 res://Scenes/conveyor.tscn
 res://Scenes/box.tscn
 res://Scenes/main.tscn
-res://Scenes/character.tscn
+res://Scenes/main.gd
 res://Scenes/movable_object.gd
