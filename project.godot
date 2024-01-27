@@ -61,3 +61,5 @@ jump={
 3d_physics/layer_2="Conveyor"
 3d_physics/layer_3="Movable"
 3d_physics/layer_4="player"
+3d_physics/layer_15="Movable Area"
+3d_physics/layer_16="Conveyor Area"

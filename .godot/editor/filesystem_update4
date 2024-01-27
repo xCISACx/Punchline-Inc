@@ -1,6 +1,6 @@
-res://Scenes/character.tscn
+res://Scenes/conveyor.gd
 res://Scenes/conveyor.tscn
-res://Scenes/main.tscn
 res://Scenes/box.tscn
-res://Scenes/player.tscn
-res://Scenes/player.gd
+res://Scenes/main.tscn
+res://Scenes/character.tscn
+res://Scenes/movable_object.gd
