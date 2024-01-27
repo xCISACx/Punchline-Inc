@@ -1,10 +1,9 @@
-res://Scenes/text_input.tscn
+res://Spawner.gd
+res://spawner.tscn
 res://Scenes/character.tscn
 res://Scenes/conveyor.tscn
 res://Scenes/box.tscn
 res://Scenes/main.tscn
-res://Scenes/text_input.gd
+res://Scenes/text_input.tscn
 res://Scenes/choice_container.tscn
-res://Scenes/answer_card_button.gd
-res://Assets/Scripts/dummy_player.gd
-res://Assets/Scripts/my_words.txt
+res://Scenes/player2.tscn
