@@ -43,6 +43,11 @@ func _physics_process(delta):
 				var pickable_items = pick_up_area.get_overlapping_bodies()
 				picked_object = pickable_items[0]
 				anti_rotation_joint.set_node_b(picked_object.get_path())
+				picked_object.axis_lock_angular_x = false
+				picked_object.axis_lock_angular_y = false
+				picked_object.axis_lock_angular_z = false
+				picked_object.moving = false
+				picked_object
 				print ("picked up")
 			elif picked_object != null:
 				drop_object()
@@ -50,8 +55,8 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("throw"):
 		if picked_object != null:
 			var knockback = picked_object.position - self.position
-			picked_object.rotation = Vector3(90,0,0)
-			picked_object.apply_central_impulse(knockback*0.5)
+			#picked_object.rotation = Vector3(90,0,0)
+			picked_object.apply_central_impulse(knockback*10)
 			drop_object()
 
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
@@ -90,10 +95,12 @@ func _physics_process(delta):
 				break
 
 	if picked_object != null:
+		#self.position.y+=0.1
 		var a = picked_object.global_transform.origin
 		var b = hand.global_transform.origin
 		picked_object.set_linear_velocity((b-a)*pull_power)
-		
+
+	print(self.position)
 
 func _unhandled_input(_event: InputEvent) -> void:
 	pass

@@ -66,7 +66,14 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.004
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.00470734, 0.095, -3.91886)
 
 [node name="Box" parent="." instance=ExtResource("2_4q77w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.59693, 2.40031, -3.67553)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.94108, 2.40031, -4.46335)
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+mass = 0.2
+
+[node name="Box2" parent="." instance=ExtResource("2_4q77w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.59693, 2.40031, -0.97637)
 mass = 0.2
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
