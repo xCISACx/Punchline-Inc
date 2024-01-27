@@ -1,7 +1,8 @@
+res://Scenes/text_input.tscn
 res://Scenes/character.tscn
 res://Scenes/conveyor.tscn
 res://Scenes/box.tscn
 res://Scenes/main.tscn
-res://Scenes/player2scene.tscn
-res://Scenes/player2script.gd
-res://Scenes/movable_object.gd
+res://Scenes/text_input.gd
+res://Scenes/choice_container.tscn
+res://Scenes/answer_card_button.gd

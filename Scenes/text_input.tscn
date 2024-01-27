@@ -1,0 +1,327 @@
+[gd_scene load_steps=5 format=3 uid="uid://bq785l1wmksxa"]
+
+[ext_resource type="Script" path="res://Scenes/text_input.gd" id="1_ac7mt"]
+[ext_resource type="PackedScene" uid="uid://bci2a2davas7d" path="res://Scenes/choice_container.tscn" id="2_ivlqh"]
+[ext_resource type="Script" path="res://Scenes/answer_card_button.gd" id="3_5dswh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxqen"]
+bg_color = Color(0.168627, 0.478431, 0.627451, 1)
+
+[node name="TextInput" type="Node3D" node_paths=PackedStringArray("text_edit", "submitted_text", "main_joke_container", "joke_container", "card_container", "submission_container", "main_answer_card_container", "answer_card_container", "winning_player_label", "winner_label")]
+script = ExtResource("1_ac7mt")
+text_edit = NodePath("Control/MainJokeContainer/JokeContainer/TextEdit")
+submitted_text = NodePath("Control/MainJokeContainer/SubmissionContainer/SubmittedTextPanel/SubmittedText")
+main_joke_container = NodePath("Control/MainJokeContainer")
+joke_container = NodePath("Control/MainJokeContainer/JokeContainer")
+card_container = NodePath("Control/MainJokeContainer/SubmissionContainer/CardContainer")
+submission_container = NodePath("Control/MainJokeContainer/SubmissionContainer")
+main_answer_card_container = NodePath("Control/MainJokeContainer/AnswerCardMainContainer")
+answer_card_container = NodePath("Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer")
+winning_player_label = NodePath("Control/MainJokeContainer/AnswerCardMainContainer/WinningPlayerLabel")
+winner_label = NodePath("Control/WinnerLabel")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 648.0
+
+[node name="MainJokeContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -323.0
+offset_right = 320.0
+offset_bottom = 547.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="JokeContainer" type="VBoxContainer" parent="Control/MainJokeContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/MainJokeContainer/JokeContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Input a joke:"
+horizontal_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Control/MainJokeContainer/JokeContainer"]
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+placeholder_text = "Your joke here..."
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="SubmitButton" type="Button" parent="Control/MainJokeContainer/JokeContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "SUBMIT"
+
+[node name="SubmissionContainer" type="VBoxContainer" parent="Control/MainJokeContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="SubmittedTextPanel" type="Panel" parent="Control/MainJokeContainer/SubmissionContainer"]
+visible = false
+custom_minimum_size = Vector2(500, 230)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jxqen")
+
+[node name="SubmittedText" type="Label" parent="Control/MainJokeContainer/SubmissionContainer/SubmittedTextPanel"]
+custom_minimum_size = Vector2(580, 60)
+layout_mode = 2
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 620.0
+offset_bottom = 210.0
+theme_override_font_sizes/font_size = 20
+text = "Submited Joke"
+autowrap_mode = 3
+
+[node name="CardContainer" type="HBoxContainer" parent="Control/MainJokeContainer/SubmissionContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="ChoiceContainer1" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer" instance=ExtResource("2_ivlqh")]
+layout_mode = 2
+
+[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer1/ChoiceContainer/ChoicePromptContainer1" index="0"]
+text = "player 1 test 1"
+
+[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer1/ChoiceContainer/ChoicePromptContainer2" index="0"]
+text = "player 1 test 2"
+
+[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer1/ChoiceContainer/ChoicePromptContainer3" index="0"]
+text = "player 1 test 3"
+
+[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer1/ChoiceContainer/ChoicePromptContainer4" index="0"]
+text = "player 1 test 4"
+
+[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer1/ChoiceContainer/ChoicePromptContainer5" index="0"]
+text = "player 1 test 5"
+
+[node name="Button1" type="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer"]
+visible = false
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "test 1"
+
+[node name="ChoiceContainer2" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer" instance=ExtResource("2_ivlqh")]
+layout_mode = 2
+
+[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer1" index="0"]
+text = "player 2 test 1"
+
+[node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer1" index="1"]
+text = "Z"
+
+[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer2" index="0"]
+text = "player 2 test 2"
+
+[node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer2" index="1"]
+text = "X"
+
+[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer3" index="0"]
+text = "player 2 test 3"
+
+[node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer3" index="1"]
+text = "C"
+
+[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer4" index="0"]
+text = "player 2 test 4"
+
+[node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer4" index="1"]
+text = "V"
+
+[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer5" index="0"]
+text = "player 2 test 5"
+
+[node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2/ChoiceContainer/ChoicePromptContainer5" index="1"]
+text = "B"
+
+[node name="Button2" type="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer"]
+visible = false
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "test 2"
+
+[node name="ChoiceContainer3" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer" instance=ExtResource("2_ivlqh")]
+layout_mode = 2
+
+[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer1" index="0"]
+text = "player 3 test 1"
+
+[node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer1" index="1"]
+text = "Y"
+
+[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer2" index="0"]
+text = "player 3 test 2"
+
+[node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer2" index="1"]
+text = "U"
+
+[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer3" index="0"]
+text = "player 3 test 3"
+
+[node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer3" index="1"]
+text = "I"
+
+[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer4" index="0"]
+text = "player 3 test 4"
+
+[node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer4" index="1"]
+text = "O"
+
+[node name="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer5" index="0"]
+text = "player 3 test 5"
+
+[node name="ChoicePrompt" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3/ChoiceContainer/ChoicePromptContainer5" index="1"]
+text = "P"
+
+[node name="Button3" type="Button" parent="Control/MainJokeContainer/SubmissionContainer/CardContainer"]
+visible = false
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "test 3"
+
+[node name="WordContainer" type="HBoxContainer" parent="Control/MainJokeContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label1" type="Label" parent="Control/MainJokeContainer/WordContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+text = "Before I run for president, I must destroy all evidence of my involvement with _"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Control/MainJokeContainer/WordContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+text = "Before I run for president, I must destroy all evidence of my involvement with _"
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Control/MainJokeContainer/WordContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+text = "Before I run for president, I must destroy all evidence of my involvement with _"
+autowrap_mode = 2
+
+[node name="AnswerCardMainContainer" type="VBoxContainer" parent="Control/MainJokeContainer"]
+visible = false
+layout_mode = 2
+
+[node name="AnswerCardContainer" type="HBoxContainer" parent="Control/MainJokeContainer/AnswerCardMainContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Button1" type="Button" parent="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("3_5dswh")
+
+[node name="Label" type="Label" parent="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button1"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+text = "test 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button2" type="Button" parent="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("3_5dswh")
+player_id = 1
+
+[node name="Label" type="Label" parent="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button2"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+text = "test 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button3" type="Button" parent="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("3_5dswh")
+player_id = 2
+
+[node name="Label" type="Label" parent="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button3"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+text = "test 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="PickWinnerButton" type="Button" parent="Control/MainJokeContainer/AnswerCardMainContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "PICK WINNER"
+
+[node name="WinningPlayerLabel" type="Label" parent="Control/MainJokeContainer/AnswerCardMainContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Who is going to win this round?"
+
+[node name="WinnerLabel" type="Label" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -293.5
+offset_top = -55.0
+offset_right = 293.5
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "PLAYER X WINS!"
+horizontal_alignment = 1
+
+[connection signal="text_changed" from="Control/MainJokeContainer/JokeContainer/TextEdit" to="." method="_on_text_edit_text_changed"]
+[connection signal="pressed" from="Control/MainJokeContainer/JokeContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
+[connection signal="pressed" from="Control/MainJokeContainer/SubmissionContainer/CardContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Control/MainJokeContainer/SubmissionContainer/CardContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control/MainJokeContainer/SubmissionContainer/CardContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Control/MainJokeContainer/AnswerCardMainContainer/PickWinnerButton" to="." method="_on_pick_winner_button_pressed"]
+
+[editable path="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer1"]
+[editable path="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2"]
+[editable path="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer3"]

@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://bci2a2davas7d"]
+
+[node name="ChoiceContainer1" type="VBoxContainer"]
+
+[node name="ChoiceContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="ChoicePromptContainer1" type="HBoxContainer" parent="ChoiceContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ChoiceContainer/ChoicePromptContainer1"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "test 1"
+
+[node name="ChoicePrompt" type="Button" parent="ChoiceContainer/ChoicePromptContainer1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "1"
+
+[node name="ChoicePromptContainer2" type="HBoxContainer" parent="ChoiceContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ChoiceContainer/ChoicePromptContainer2"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "test 2"
+
+[node name="ChoicePrompt" type="Button" parent="ChoiceContainer/ChoicePromptContainer2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "2"
+
+[node name="ChoicePromptContainer3" type="HBoxContainer" parent="ChoiceContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ChoiceContainer/ChoicePromptContainer3"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "test 3"
+
+[node name="ChoicePrompt" type="Button" parent="ChoiceContainer/ChoicePromptContainer3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "3"
+
+[node name="ChoicePromptContainer4" type="HBoxContainer" parent="ChoiceContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ChoiceContainer/ChoicePromptContainer4"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "test 4"
+
+[node name="ChoicePrompt" type="Button" parent="ChoiceContainer/ChoicePromptContainer4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "4"
+
+[node name="ChoicePromptContainer5" type="HBoxContainer" parent="ChoiceContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ChoiceContainer/ChoicePromptContainer5"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "test 5"
+
+[node name="ChoicePrompt" type="Button" parent="ChoiceContainer/ChoicePromptContainer5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "5"
