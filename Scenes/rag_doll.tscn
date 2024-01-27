@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://dw7efta4rbtxf"]
-
-[node name="RagDoll" type="Node3D"]
-
-[node name="Skeleton3D" type="Skeleton3D" parent="."]
-
-[node name="PhysicalBone3D" type="PhysicalBone3D" parent="Skeleton3D"]

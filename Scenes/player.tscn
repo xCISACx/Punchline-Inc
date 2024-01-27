@@ -7,36 +7,13 @@
 radius = 0.226218
 height = 1.42966
 
-[node name="Player" type="CharacterBody3D" groups=["player"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.223138, 0)
-collision_layer = 8
-collision_mask = 25
+[node name="Node3D" type="CharacterBody3D"]
 script = ExtResource("1_84yvg")
 
 [node name="Pivot" type="Node3D" parent="."]
 
 [node name="character-soldier2" parent="Pivot" instance=ExtResource("1_debt7")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-
-[node name="Hand" type="Marker3D" parent="Pivot"]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11854, 0.01818)
-
-[node name="Interaction" type="RayCast3D" parent="Pivot"]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.486156, -0.153901)
-target_position = Vector3(0, -1, -5)
-collision_mask = 5
-
-[node name="AntiRotationJoint" type="Generic6DOFJoint3D" parent="Pivot"]
-unique_name_in_owner = true
-node_a = NodePath("../StaticBody3D")
-linear_limit_x/enabled = false
-linear_limit_y/enabled = false
-linear_limit_z/enabled = false
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.119, 0.018)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.589486, 0, 0, 0, 1, 0, 0.306835, 0)
