@@ -9,3 +9,9 @@ res://Scenes/player3.1.tscn
 res://Scenes/player4.tscn
 res://Scenes/merged.tscn
 res://Scenes/text_input.gd
+res://Scenes/movable_object.gd
+res://Scenes/player1.gd
+res://Scenes/player2.gd
+res://Scenes/player3.1.gd
+res://Scenes/player4.gd
+res://Scenes/game_manager.gd

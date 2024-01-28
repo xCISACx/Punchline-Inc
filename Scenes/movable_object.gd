@@ -9,6 +9,7 @@ var target_point
 var target_marker
 var word
 @export var label : Label3D
+var owner_id
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

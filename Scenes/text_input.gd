@@ -58,8 +58,7 @@ func populate_submission_buttons():
 			#print(str(card_container_path) + "/ChoiceContainer" + str(i + 1) + "/ChoiceContainer/ChoicePromptContainer" + str(j) + "/Panel/Label")
 			var label = get_node(str(card_container_path) + "/ChoiceContainer" + str(i + 1) + "/ChoiceContainer/ChoicePromptContainer" + str(j) + "/Panel/Label")
 			if label:
-				pass
-				#label.text = player_list[player_index].collected_words[j - 1]
+				label.text = get_owner().player_list[player_index].collected_words[j - 1]
 	
 func initialise():
 	create_word_list()

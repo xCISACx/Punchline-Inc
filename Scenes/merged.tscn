@@ -11,15 +11,6 @@ player_list = [NodePath("Level1/Player"), NodePath("Level1/Player2"), NodePath("
 
 [node name="Level1" parent="." instance=ExtResource("1_qe2ty")]
 
-[node name="room (2)" parent="Level1" index="47"]
-transform = Transform3D(-4.37114e-08, -0.0174524, -0.999848, 0, 0.999848, -0.0174524, 1, -7.62869e-10, -4.37047e-08, -1.7736, 5.38716, -16.2591)
-
-[node name="barril1" parent="Level1/Barrel2" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51299, -0.976461, 0)
-
-[node name="barril1" parent="Level1/Barrel3" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.618694, 0)
-
 [node name="TextInput" parent="." node_paths=PackedStringArray("player_list") instance=ExtResource("2_4nqmg")]
 visible = false
 player_list = [NodePath("../Level1/Player"), NodePath("../Level1/Player2"), NodePath("../Level1/Player3"), NodePath("../Level1/Player4")]

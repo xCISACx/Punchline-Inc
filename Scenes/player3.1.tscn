@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://uf366rv657r5"]
+[gd_scene load_steps=7 format=3 uid="uid://uf366rv657r5"]
 
 [ext_resource type="Script" path="res://Scenes/player3.1.gd" id="1_uevi6"]
 [ext_resource type="PackedScene" uid="uid://cn2idqvfqodjx" path="res://Scenes/fatty_2.tscn" id="2_egcj0"]
 [ext_resource type="AudioStream" uid="uid://wsv74504nk7v" path="res://Assets/Sounds/give_me_that_fat.wav" id="3_jpyvl"]
 [ext_resource type="AudioStream" uid="uid://bj8311fatemb8" path="res://Assets/Sounds/jump_smash (mp3cut.net).wav" id="4_0awkq"]
-[ext_resource type="AudioStream" uid="uid://didijk4yhc3va" path="res://Assets/Sounds/dizz (mp3cut.net).wav" id="5_5ikey"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_is7qr"]
 size = Vector3(1, 0.530205, 1)
@@ -101,20 +100,16 @@ shape = SubResource("CylinderShape3D_25j7v")
 [node name="GiveMeThatFat" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("3_jpyvl")
-volume_db = 10.0
+volume_db = 3.0
 
 [node name="JumpSmash" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("4_0awkq")
 
-[node name="Dizzy" type="AudioStreamPlayer" parent="."]
-unique_name_in_owner = true
-stream = ExtResource("5_5ikey")
-volume_db = -80.0
-
 [node name="WordLabel" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
 billboard = 1
+text = "word"
 font_size = 100
 autowrap_mode = 3
 width = 700.0

@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+@export var id : int
 const global_speed:= 4.5
 @export var speed = 4.5
 @export var fall_acceleration = 75
@@ -98,6 +99,7 @@ func _physics_process(delta):
 					picked_object.moving = false
 				bigode_5.animation_player.set_assigned_animation("IDLE2")
 				$WordLabel.text = picked_object.word
+				picked_object.owner_id = id
 				print ("picked up")
 				break
 
@@ -115,6 +117,7 @@ func _physics_process(delta):
 			pull_power = global_pull_power
 			if picked_object is RigidBody3D:
 				picked_object.apply_central_impulse(knockback*5*Vector3(5,0,0))
+			picked_object.owner_id = -1
 			drop_object()
 
 	if is_on_floor() and Input.is_action_just_pressed("jump3") and picked_object == null:
@@ -184,6 +187,7 @@ func drop_object() -> void:
 		anti_rotation_joint.set_node_b(anti_rotation_joint.get_path())
 		bigode_5.animation_player.set_assigned_animation(" IDLE")
 		$WordLabel.text = ""
+		picked_object.owner_id = -1
 		print("dropped object")
 
 func generate_words():
