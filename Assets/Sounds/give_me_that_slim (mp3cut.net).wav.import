@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bvpbjepg5cyn6"
+path="res://.godot/imported/give_me_that_slim (mp3cut.net).wav-e5f53194c7db227299430ccf28c5f091.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/give_me_that_slim (mp3cut.net).wav"
+dest_files=["res://.godot/imported/give_me_that_slim (mp3cut.net).wav-e5f53194c7db227299430ccf28c5f091.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

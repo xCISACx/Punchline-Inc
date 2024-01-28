@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3fg18fe0ib4n"]
+[gd_scene load_steps=8 format=3 uid="uid://d3fg18fe0ib4n"]
 
 [ext_resource type="Script" path="res://Scenes/player2.gd" id="1_440w5"]
 [ext_resource type="PackedScene" uid="uid://dhglfkb78qjdi" path="res://Scenes/bigode_7.tscn" id="2_m0ae1"]
+[ext_resource type="AudioStream" uid="uid://didijk4yhc3va" path="res://Assets/Sounds/dizz (mp3cut.net).wav" id="3_fb6uv"]
+[ext_resource type="AudioStream" uid="uid://bvpbjepg5cyn6" path="res://Assets/Sounds/give_me_that_slim (mp3cut.net).wav" id="4_xw7ni"]
+[ext_resource type="AudioStream" uid="uid://bj8311fatemb8" path="res://Assets/Sounds/jump_smash (mp3cut.net).wav" id="5_5j4vn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_is7qr"]
 size = Vector3(1, 0.530205, 1)
@@ -98,9 +101,22 @@ shape = SubResource("CylinderShape3D_25j7v")
 [node name="WordLabel" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
 billboard = 1
-text = "word"
 font_size = 100
 autowrap_mode = 3
 width = 700.0
+
+[node name="Dizzy" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_fb6uv")
+volume_db = -10.0
+
+[node name="GimmeThat" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_xw7ni")
+volume_db = 10.0
+
+[node name="JumpSmash" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_5j4vn")
 
 [connection signal="body_entered" from="Pivot/PickUpArea" to="." method="_on_area_3d_body_entered"]

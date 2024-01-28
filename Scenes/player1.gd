@@ -28,6 +28,8 @@ var controller_index = 0
 @onready var dizzy: AudioStreamPlayer = %Dizzy
 
 @export var collected_words : Array[String]
+@onready var gimme_that: AudioStreamPlayer = %GimmeThat
+@onready var jump_smash: AudioStreamPlayer = %JumpSmash
 
 
 func _ready():
@@ -35,6 +37,8 @@ func _ready():
 
 
 func _physics_process(delta):
+	if position.y < 0.9:
+		self.position = Vector3(2,2,2)
 	bigode_5.animation_player.play()
 	if velocity.y < 0:
 		bigode_5.animation_player.set_assigned_animation("air")
@@ -99,8 +103,10 @@ func _physics_process(delta):
 				bigode_5.animation_player.set_assigned_animation("idle2")
 				$WordLabel.text = picked_object.word
 				print ("picked up")
+				break
 			elif picked_object != null:
 				drop_object()
+				break
 
 	if Input.is_action_just_pressed("throw"):
 		if picked_object != null:
@@ -129,8 +135,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
 
-	velocity = target_velocity
-	move_and_slide()
+	
 
 	for index in range(get_slide_collision_count()):
 		
@@ -139,11 +144,15 @@ func _physics_process(delta):
 		if collision.get_collider() == null:
 			continue
 
-		if collision.get_collider().is_in_group("player"):
+		if collision.get_collider().is_in_group("Player"):
 			var player = collision.get_collider()
 			# we check that we are hitting it from above.
 			if Vector3.UP.dot(collision.get_normal()) > 0.1:
 				# If so, we squash it and bounce.
+				if player.picked_object != null:
+					gimme_that.play()
+				else:
+					jump_smash.play()
 				player.squash()
 				player.speed = 0
 				player.picked_object = null
@@ -151,6 +160,9 @@ func _physics_process(delta):
 				target_velocity.y = bounce_impulse
 				
 				break
+
+	velocity = target_velocity	
+	move_and_slide()
 
 	if picked_object != null:
 
@@ -199,5 +211,4 @@ func squash() -> void:
 	print("squashed")
 	dizzy.play()
 	await get_tree().create_timer(1.5).timeout
-	
 	speed = global_speed

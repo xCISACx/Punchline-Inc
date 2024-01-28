@@ -22,8 +22,10 @@ const global_pull_power: = 40
 @onready var interaction_6: RayCast3D = %Interaction6
 @onready var pick_up_area: Area3D = %PickUpArea
 @onready var bigode_5: Node3D = %bigode7
-
 @export var collected_words : Array[String]
+@onready var dizzy: AudioStreamPlayer = %Dizzy
+@onready var gimme_that: AudioStreamPlayer = %GimmeThat
+@onready var jump_smash: AudioStreamPlayer = %JumpSmash
 
 
 
@@ -32,6 +34,8 @@ func _ready():
 
 
 func _physics_process(delta):
+	if position.y < 0.9:
+		self.position = Vector3(2,2,2)
 	bigode_5.animation_player.play()
 	if velocity.y < 0 and picked_object == null:
 		bigode_5.animation_player.set_assigned_animation("air")
@@ -82,7 +86,7 @@ func _physics_process(delta):
 				speed = 0
 				await get_tree().create_timer(1).timeout
 				picked_object = pickable_items[0]
-				picked_object.set_collision_mask_value(4,false)
+				#picked_object.set_collision_mask_value(4,false)
 				#self.set_collision_mask_value(3,false)
 				speed = global_speed
 				anti_rotation_joint.set_node_b(picked_object.get_path())
@@ -95,8 +99,10 @@ func _physics_process(delta):
 				bigode_5.animation_player.set_assigned_animation("idle2")
 				$WordLabel.text = picked_object.word
 				print ("picked up")
+				break
 			elif picked_object != null:
 				drop_object()
+				break
 
 	if Input.is_action_just_pressed("throw2"):
 		if picked_object != null:
@@ -135,11 +141,15 @@ func _physics_process(delta):
 		if collision.get_collider() == null:
 			continue
 
-		if collision.get_collider().is_in_group("player"):
+		if collision.get_collider().is_in_group("Player"):
 			var player = collision.get_collider()
 			# we check that we are hitting it from above.
 			if Vector3.UP.dot(collision.get_normal()) > 0.1:
 				# If so, we squash it and bounce.
+				if player.picked_object != null:
+					gimme_that.play()
+				else:
+					jump_smash.play()
 				player.squash()
 				player.speed = 0
 				player.set_collision_mask_value(4,false)
@@ -191,6 +201,7 @@ func generate_words():
 func squash() -> void:
 	speed = 4
 	bigode_5.kill()
+	dizzy.play()
 	print("squashed")
 	await get_tree().create_timer(1).timeout
 	speed = global_speed
