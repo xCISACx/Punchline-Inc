@@ -1,15 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://bq785l1wmksxa"]
+[gd_scene load_steps=9 format=3 uid="uid://bq785l1wmksxa"]
 
 [ext_resource type="Script" path="res://Scenes/text_input.gd" id="1_ac7mt"]
+[ext_resource type="Texture2D" uid="uid://0udd4b5eo7no" path="res://Assets/Textures/prompt.png" id="2_4rfq8"]
 [ext_resource type="PackedScene" uid="uid://bci2a2davas7d" path="res://Scenes/choice_container.tscn" id="2_ivlqh"]
 [ext_resource type="Script" path="res://Scenes/answer_card_button.gd" id="3_5dswh"]
 [ext_resource type="Script" path="res://Assets/Scripts/dummy_player.gd" id="4_nhsuu"]
+[ext_resource type="Texture2D" uid="uid://b6weeahk7cje7" path="res://Assets/Textures/card1.png" id="5_2vycv"]
+[ext_resource type="Texture2D" uid="uid://dxu5o8hb513u8" path="res://Assets/Textures/card2.png" id="6_h4dbr"]
 
 [sub_resource type="Shortcut" id="Shortcut_x8agt"]
 events = [null]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxqen"]
-bg_color = Color(0.168627, 0.478431, 0.627451, 1)
 
 [node name="TextInput" type="Node3D" node_paths=PackedStringArray("text_edit", "submitted_text", "main_joke_container", "joke_container", "card_container", "submission_container", "main_answer_card_container", "answer_card_container", "winning_player_label", "winner_label", "player_labels_container", "player_list")]
 script = ExtResource("1_ac7mt")
@@ -59,7 +59,7 @@ text = "Input a joke:"
 horizontal_alignment = 1
 
 [node name="TextEdit" type="TextEdit" parent="Control/MainJokeContainer/JokeContainer"]
-custom_minimum_size = Vector2(500, 200)
+custom_minimum_size = Vector2(500, 135)
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 placeholder_text = "Your joke here..."
@@ -77,18 +77,19 @@ visible = false
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="SubmittedTextPanel" type="Panel" parent="Control/MainJokeContainer/SubmissionContainer"]
+[node name="SubmittedTextPanel" type="TextureRect" parent="Control/MainJokeContainer/SubmissionContainer"]
 custom_minimum_size = Vector2(500, 230)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_jxqen")
+texture = ExtResource("2_4rfq8")
+expand_mode = 1
 
 [node name="SubmittedText" type="Label" parent="Control/MainJokeContainer/SubmissionContainer/SubmittedTextPanel"]
 custom_minimum_size = Vector2(580, 60)
 layout_mode = 2
 offset_left = 20.0
-offset_top = 20.0
+offset_top = 38.5
 offset_right = 620.0
-offset_bottom = 210.0
+offset_bottom = 173.5
 theme_override_font_sizes/font_size = 20
 text = "Submited Joke"
 autowrap_mode = 3
@@ -216,13 +217,23 @@ custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+flat = true
+expand_icon = true
 script = ExtResource("3_5dswh")
+
+[node name="TextureRect" type="TextureRect" parent="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button1"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+texture = ExtResource("5_2vycv")
+expand_mode = 1
 
 [node name="Label" type="Label" parent="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button1"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "test 1"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -236,11 +247,18 @@ size_flags_vertical = 0
 script = ExtResource("3_5dswh")
 player_id = 1
 
+[node name="TextureRect" type="TextureRect" parent="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button2"]
+offset_right = 200.0
+offset_bottom = 200.0
+texture = ExtResource("6_h4dbr")
+expand_mode = 1
+
 [node name="Label" type="Label" parent="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button2"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "test 1"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -254,11 +272,18 @@ size_flags_vertical = 0
 script = ExtResource("3_5dswh")
 player_id = 2
 
+[node name="TextureRect" type="TextureRect" parent="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button3"]
+offset_right = 200.0
+offset_bottom = 200.0
+texture = ExtResource("5_2vycv")
+expand_mode = 1
+
 [node name="Label" type="Label" parent="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button3"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "test 1"
 horizontal_alignment = 1
 vertical_alignment = 1

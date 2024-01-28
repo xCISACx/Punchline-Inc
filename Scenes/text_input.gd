@@ -63,10 +63,10 @@ func populate_submission_buttons():
 	
 func initialise():
 	create_word_list()
-	print(get_owner().player_list)
+	#print(get_owner().player_list)
 	#for player in get_owner().player_list:
 		#pass
-		##player.generate_words()
+		#player.generate_words()
 	#print(word_list)
 	participating_player_ids = [0, 1, 2, 3]
 	czar_id = randi_range(0, 3)

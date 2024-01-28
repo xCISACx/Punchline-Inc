@@ -1,3 +1,4 @@
+TextureRect
 Label3D
 Label
 AudioStreamPlayer
@@ -11,4 +12,3 @@ Control
 CollisionShape3D
 Area3D
 MeshInstance3D
-RigidBody3D
