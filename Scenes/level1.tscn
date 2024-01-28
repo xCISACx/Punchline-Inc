@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bc2po731loyp4" path="res://Assets/World/cb_curved.glb" id="4_jnh0f"]
 [ext_resource type="PackedScene" uid="uid://debj5gi2h341s" path="res://Scenes/conveyor.tscn" id="5_dijax"]
 [ext_resource type="PackedScene" uid="uid://ce3cpapou43nf" path="res://Scenes/spawner.tscn" id="5_w7qvo"]
-[ext_resource type="PackedScene" uid="uid://vkgi816ih4i5" path="res://Scenes/box.tscn" id="6_ti7t6"]
+[ext_resource type="Script" path="res://Scenes/answer_box.gd" id="7_fs2ws"]
 [ext_resource type="PackedScene" uid="uid://uf366rv657r5" path="res://Scenes/player3.1.tscn" id="10_wal5f"]
 [ext_resource type="PackedScene" uid="uid://d3fg18fe0ib4n" path="res://Scenes/player2.tscn" id="11_fkbkg"]
 [ext_resource type="PackedScene" uid="uid://5131o4723smh" path="res://Scenes/player4.tscn" id="11_n0bib"]
@@ -150,9 +150,6 @@ transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, 
 [node name="Conveyor22" parent="." instance=ExtResource("5_dijax")]
 transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, 1.22327, 2.48121, 3.94831)
 
-[node name="Box" parent="." instance=ExtResource("6_ti7t6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 4, 5.95898)
-
 [node name="LeftWall" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.036, 9.73716, 0)
 
@@ -191,6 +188,7 @@ shape = SubResource("BoxShape3D_gyh82")
 [node name="Redbox" type="Area3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.69427, 3.18968, -12.8902)
 collision_mask = 4
+script = ExtResource("7_fs2ws")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Redbox"]
 transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -1.95595, -0.695143, 0.0760307)
@@ -199,6 +197,8 @@ shape = SubResource("BoxShape3D_p85dc")
 [node name="Bluebox" type="Area3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.16433, 3.18968, -12.8902)
 collision_mask = 4
+script = ExtResource("7_fs2ws")
+player_id = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bluebox"]
 transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -1.89026, -0.623458, 0.0760312)
@@ -207,6 +207,8 @@ shape = SubResource("BoxShape3D_p85dc")
 [node name="Yellowbox" type="Area3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.684146, 3.18968, -12.8902)
 collision_mask = 4
+script = ExtResource("7_fs2ws")
+player_id = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Yellowbox"]
 transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -1.95595, -0.695143, 0.0760307)
@@ -215,6 +217,8 @@ shape = SubResource("BoxShape3D_p85dc")
 [node name="Greenbox" type="Area3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.86944, 3.18968, -12.8902)
 collision_mask = 4
+script = ExtResource("7_fs2ws")
+player_id = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Greenbox"]
 transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -1.95595, -0.695143, 0.0760307)
@@ -234,12 +238,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.07636, 6.36508, 1.63889)
 
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38995, -0.463122)
-
-[node name="Label3D" type="Label3D" parent="Player"]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
-text = "alaalalallalalalaalal"
-font_size = 128
 
 [node name="Spawner" parent="." instance=ExtResource("5_w7qvo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.92633, 14.1917, 10.7778)

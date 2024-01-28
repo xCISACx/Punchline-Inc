@@ -4,7 +4,7 @@ var collected_words : Array[String]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	collected_words.resize(5)
+	#collected_words.resize(5)
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

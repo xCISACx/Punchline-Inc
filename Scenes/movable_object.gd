@@ -7,6 +7,8 @@ var movement_speed = 2
 var current_conveyor
 var target_point
 var target_marker
+var word
+@export var label : Label3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

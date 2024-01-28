@@ -12,7 +12,7 @@ size = Vector3(0.3, 0.2, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_j27c6"]
 size = Vector3(0.25, 0.25, 0.25)
 
-[node name="Box" type="RigidBody3D" groups=["Movable"]]
+[node name="Box" type="RigidBody3D" node_paths=PackedStringArray("label") groups=["Movable"]]
 collision_layer = 4
 collision_mask = 7
 axis_lock_angular_x = true
@@ -22,6 +22,7 @@ mass = 0.2
 freeze_mode = 1
 continuous_cd = true
 script = ExtResource("1_gi000")
+label = NodePath("Label3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 0.106886, 0, -1, 0, -4.37114e-08, -0.00264823, 0.0191223, -0.000827372)
@@ -38,3 +39,9 @@ collision_mask = 32768
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_j27c6")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.0329306, 0)
+font_size = 20
+autowrap_mode = 3
+width = 180.0

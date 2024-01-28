@@ -28,6 +28,7 @@ player_list = [NodePath("Node3D"), NodePath("Node3D2"), NodePath("Node3D3"), Nod
 words = "res://Assets/Text/words_updated.txt"
 
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1150.0

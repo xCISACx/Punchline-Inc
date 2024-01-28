@@ -55,16 +55,19 @@ func populate_submission_buttons():
 	for i in range(participating_player_ids.size()):
 		var player_index = participating_player_ids[i]
 		for j in range(1, 6):  # Adjust the range to include 1 to 5
-			print(str(card_container_path) + "/ChoiceContainer" + str(i + 1) + "/ChoiceContainer/ChoicePromptContainer" + str(j) + "/Panel/Label")
+			#print(str(card_container_path) + "/ChoiceContainer" + str(i + 1) + "/ChoiceContainer/ChoicePromptContainer" + str(j) + "/Panel/Label")
 			var label = get_node(str(card_container_path) + "/ChoiceContainer" + str(i + 1) + "/ChoiceContainer/ChoicePromptContainer" + str(j) + "/Panel/Label")
 			if label:
-				label.text = player_list[player_index].collected_words[j - 1]
+				pass
+				#label.text = player_list[player_index].collected_words[j - 1]
 	
 func initialise():
 	create_word_list()
-	for player in player_list:
-		player.generate_words()
-	print(word_list)
+	print(get_owner().player_list)
+	#for player in get_owner().player_list:
+		#pass
+		##player.generate_words()
+	#print(word_list)
 	participating_player_ids = [0, 1, 2, 3]
 	czar_id = randi_range(0, 3)
 	participating_player_ids.erase(czar_id)

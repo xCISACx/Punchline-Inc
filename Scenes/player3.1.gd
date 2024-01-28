@@ -25,6 +25,8 @@ var controller_index = 0
 @onready var give_me_that_fat: AudioStreamPlayer = %GiveMeThatFat
 @onready var jump_smash: AudioStreamPlayer = %JumpSmash
 
+@export var collected_words : Array[String]
+
 
 
 func _ready():
@@ -93,6 +95,7 @@ func _physics_process(delta):
 					picked_object.moving = false
 
 				bigode_5.animation_player.set_assigned_animation("IDLE2")
+				$WordLabel.text = picked_object.word
 				print ("picked up")
 			elif picked_object != null:
 				
@@ -177,7 +180,23 @@ func drop_object() -> void:
 		self.set_collision_mask_value(3,true)
 		anti_rotation_joint.set_node_b(anti_rotation_joint.get_path())
 		bigode_5.animation_player.set_assigned_animation(" IDLE")
+		$WordLabel.text = ""
 		print("dropped object")
+
+func generate_words():
+	var text_input_scene = get_tree().root.get_node("Merged/TextInput")
+	print(str(text_input_scene))
+	if text_input_scene.word_list.size() != 0:
+		for i in range(collected_words.size()):
+			var random_index = randi_range(0, text_input_scene.word_list.size() - 1)
+			var word = text_input_scene.word_list[random_index]
+			if word.length() > 0:
+				collected_words[i] = word
+				text_input_scene.word_list.erase(word)
+				text_input_scene.used_words_list.append(word)
+			else:
+				print("Empty word encountered!")
+				i -= 1  # Retry with a different word index
 
 
 func squash() -> void:

@@ -12,7 +12,7 @@ size = Vector3(1, 0.530205, 1)
 height = 3.14059
 radius = 0.478052
 
-[node name="Player" type="CharacterBody3D" groups=["player"]]
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.223138, 0)
 collision_layer = 8
 collision_mask = 9
@@ -106,5 +106,13 @@ shape = SubResource("CylinderShape3D_25j7v")
 [node name="Dizzy" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("4_trnng")
+
+[node name="WordLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+billboard = 1
+text = "word"
+font_size = 100
+autowrap_mode = 3
+width = 700.0
 
 [connection signal="body_entered" from="Pivot/PickUpArea" to="." method="_on_area_3d_body_entered"]
