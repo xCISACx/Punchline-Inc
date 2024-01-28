@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
 @export var id : int
-const global_speed:= 7
-@export var speed = 7
+const global_speed:= 20
+@export var speed = 20
 @export var fall_acceleration = 75
 @export var jump_impulse = 20
 @export var bounce_impulse = 10
@@ -91,10 +91,11 @@ func _physics_process(delta):
 				picked_object = pickable_items[0]
 				#await get_tree().create_timer(1).timeout
 				
-				picked_object.set_collision_mask_value(4,false)
+				#picked_object.set_collision_mask_value(4,false)
 				#self.set_collision_mask_value(3,false)
 				speed = global_speed
-				anti_rotation_joint.set_node_b(picked_object.get_path())
+				if picked_object: 
+					anti_rotation_joint.set_node_b(picked_object.get_path())
 				#picked_object.axis_lock_angular_x = true
 				#picked_object.axis_lock_angular_y = true
 				#picked_object.axis_lock_angular_z = true
@@ -159,7 +160,7 @@ func _physics_process(delta):
 				player.squash()
 				player.speed = 0
 				player.picked_object = null
-				player.set_collision_mask_value(4,false)
+				#player.set_collision_mask_value(4,false)
 				target_velocity.y = bounce_impulse
 				
 				break
@@ -199,13 +200,14 @@ func generate_words():
 func drop_object() -> void:
 	if picked_object != null:
 		#picked_object.set_collision_mask_value(4,true)
+		picked_object.owner_id = -1
+		$WordLabel.text = ""
 		picked_object = null
 		await get_tree().create_timer(0.5).timeout
 		#self.set_collision_mask_value(3,true)
 		anti_rotation_joint.set_node_b(anti_rotation_joint.get_path())
 		bigode_5.animation_player.set_assigned_animation("idle")
-		$WordLabel.text = ""
-		picked_object.owner_id = -1
+		
 		print("dropped object")
 
 

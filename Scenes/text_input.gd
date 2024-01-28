@@ -26,13 +26,19 @@ var all_player_keys = ["1", "2", "3", "4", "5", "Z", "X", "C", "V", "B", "Y", "U
 @export var word_list : Array[String]
 @export var used_words_list : Array[String]
 @export_file("*.txt") var words
+var initialised = false
 
 var winner_id
+@export var required_words = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	create_word_list()
+	print(get_owner())
 	randomize()
-	initialise()
+	participating_player_ids = [0, 1, 2, 3]
+	czar_id = randi_range(0, 3)
+	participating_player_ids.erase(czar_id)
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -50,26 +56,24 @@ func create_word_list():
 	f.close()
 	
 func populate_submission_buttons():
+	print("populating")
 	var card_container_path = get_path_to(card_container)
 	
 	for i in range(participating_player_ids.size()):
 		var player_index = participating_player_ids[i]
-		for j in range(1, 6):  # Adjust the range to include 1 to 5
+		for j in range(1, required_words + 1):  # Adjust the range to include 1 to 5
 			#print(str(card_container_path) + "/ChoiceContainer" + str(i + 1) + "/ChoiceContainer/ChoicePromptContainer" + str(j) + "/Panel/Label")
 			var label = get_node(str(card_container_path) + "/ChoiceContainer" + str(i + 1) + "/ChoiceContainer/ChoicePromptContainer" + str(j) + "/Panel/Label")
 			if label:
 				label.text = get_owner().player_list[player_index].collected_words[j - 1]
 	
 func initialise():
-	create_word_list()
 	#print(get_owner().player_list)
 	#for player in get_owner().player_list:
 		#pass
 		#player.generate_words()
 	#print(word_list)
-	participating_player_ids = [0, 1, 2, 3]
-	czar_id = randi_range(0, 3)
-	participating_player_ids.erase(czar_id)
+
 	var answer_card_container_path = get_path_to(answer_card_container)
 	
 	for i in 3:
@@ -200,3 +204,8 @@ func _on_pick_winner_button_pressed():
 	main_joke_container.hide()
 	winner_label.text = "PLAYER " + str(winner_id + 1) + " WINS!"
 	winner_label.show()
+	$Timer.start()
+
+
+func _on_timer_timeout() -> void:
+	get_tree().reload_current_scene()

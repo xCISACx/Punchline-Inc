@@ -9,11 +9,12 @@ script = ExtResource("1_77fve")
 text_input = NodePath("TextInput")
 player_list = [NodePath("Level1/Player"), NodePath("Level1/Player2"), NodePath("Level1/Player3"), NodePath("Level1/Player4")]
 
-[node name="Level1" parent="." instance=ExtResource("1_qe2ty")]
-
 [node name="TextInput" parent="." node_paths=PackedStringArray("player_list") instance=ExtResource("2_4nqmg")]
 visible = false
 player_list = [NodePath("../Level1/Player"), NodePath("../Level1/Player2"), NodePath("../Level1/Player3"), NodePath("../Level1/Player4")]
+required_words = 1
+
+[node name="Level1" parent="." instance=ExtResource("1_qe2ty")]
 
 [connection signal="body_entered" from="Level1/Redbox" to="." method="_on_redbox_body_entered"]
 [connection signal="body_entered" from="Level1/Bluebox" to="." method="_on_bluebox_body_entered"]

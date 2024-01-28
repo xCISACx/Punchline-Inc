@@ -248,6 +248,7 @@ script = ExtResource("3_5dswh")
 player_id = 1
 
 [node name="TextureRect" type="TextureRect" parent="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button2"]
+layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
 texture = ExtResource("6_h4dbr")
@@ -273,6 +274,7 @@ script = ExtResource("3_5dswh")
 player_id = 2
 
 [node name="TextureRect" type="TextureRect" parent="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button3"]
+layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
 texture = ExtResource("5_2vycv")
@@ -329,6 +331,9 @@ script = ExtResource("4_nhsuu")
 [node name="Node3D4" type="Node3D" parent="."]
 script = ExtResource("4_nhsuu")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="text_changed" from="Control/MainJokeContainer/JokeContainer/TextEdit" to="." method="_on_text_edit_text_changed"]
 [connection signal="pressed" from="Control/MainJokeContainer/JokeContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
 [connection signal="pressed" from="Control/MainJokeContainer/SubmissionContainer/CardContainer/Button1" to="." method="_on_button_1_pressed"]
@@ -338,6 +343,7 @@ script = ExtResource("4_nhsuu")
 [connection signal="pressed" from="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Control/MainJokeContainer/AnswerCardMainContainer/AnswerCardContainer/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Control/MainJokeContainer/AnswerCardMainContainer/PickWinnerButton" to="." method="_on_pick_winner_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
 [editable path="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer1"]
 [editable path="Control/MainJokeContainer/SubmissionContainer/CardContainer/ChoiceContainer2"]

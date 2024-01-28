@@ -1,201 +1,201 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1706457019
-icon.svg::CompressedTexture2D::7650057786587191090::1706298749::1706298749::1::::<><>::
-Spawner.gd::GDScript::-1::1706447089::0::1::::<>Node3D<>::
-UI.tscn::PackedScene::7370764466196771484::1706443060::0::1::::<><>::
-::res://Assets/::1706456195
-::res://Assets/Characters/::1706403312
-bellyguy3.glb::PackedScene::5857647451019908241::1706403250::1706403311::1::::<><>::
-bellyguy.glb::PackedScene::8027177656192850875::1706403250::1706403312::1::::<><>::
-bellyguyRED.glb::PackedScene::2035305199735282601::1706403250::1706403311::1::::<><>::
-bellyheisenberg2.glb::PackedScene::8387163170896662868::1706403250::1706403310::1::::<><>::
-bellyheisenberg.glb::PackedScene::4399877030368048808::1706403250::1706403310::1::::<><>::
-BIGODE1.glb::PackedScene::2022373028272253616::1706403250::1706403310::1::::<><>::
-bigode3.gltf::PackedScene::4828659500794476427::1706403250::1706403309::1::::<><>::
-bigode4.glb::PackedScene::3756333178059409729::1706403250::1706403307::1::::<><>::
-bigode5.glb::PackedScene::8322694881648785220::1706403250::1706403307::1::::<><>::
-bigode6.glb::PackedScene::1636353985184883356::1706403250::1706403306::1::::<><>::
-bigode7.glb::PackedScene::4465767114967382596::1706403250::1706403306::1::::<><>::
-bigodechapel1.glb::PackedScene::4009361114558294913::1706403250::1706403308::1::::<><>::
-bigodechapel2.glb::PackedScene::8856531402155768490::1706403250::1706403308::1::::<><>::
-bigodechapel2_bigodeparabake_Material.png::CompressedTexture2D::1744410091518963239::1706403250::1706403305::1::::<><>::
-bigodechapel2_bigodeparabake_Material_2.png::CompressedTexture2D::7145456156575073808::1706403250::1706403305::1::::<><>::
-bigodechapel2_bigodeparabake_Material_3.png::CompressedTexture2D::7507747925914976412::1706403250::1706403305::1::::<><>::
-bigodechapel2_bigodeparabake_Material_4.png::CompressedTexture2D::2787469823550723538::1706403250::1706403305::1::::<><>::
-bigodechapel2_bigodeparabake_Material_BaseColor.png::CompressedTexture2D::3486174262464829842::1706403250::1706403305::1::::<><>::
-bigodetex1 (1).gltf::PackedScene::1264026680408830295::1706403250::1706403309::1::::<><>::
-bigodetex1.gltf::PackedScene::8848182018160451656::1706403250::1706403309::1::::<><>::
-::res://Assets/Characters/kenney_mini-arena/::1706298901
-License.txt::TextFile::-1::1706298901::0::1::::<><>::
-Preview.png::CompressedTexture2D::499051585272252797::1706298901::1706298901::1::::<><>::
-Sample.png::CompressedTexture2D::6714429985848764327::1706298901::1706298901::1::::<><>::
-::res://Assets/Characters/kenney_mini-arena/Models/::1706298901
-::res://Assets/Characters/kenney_mini-arena/Models/FBX format/::1706298901
-::res://Assets/Characters/kenney_mini-arena/Models/FBX format/Textures/::1706298901
-colormap.png::CompressedTexture2D::2747172082439424999::1706298901::1706298901::1::::<><>::
-::res://Assets/Characters/kenney_mini-arena/Models/GLB format/::1706298901
-banner.glb::PackedScene::3724148044489195707::1706298901::1706298901::1::::<><>::
-block.glb::PackedScene::9146280325739809404::1706298901::1706298901::1::::<><>::
-border-corner.glb::PackedScene::5167462115009178513::1706298901::1706298901::1::::<><>::
-border-straight.glb::PackedScene::7697837690738231166::1706298901::1706298901::1::::<><>::
-bricks.glb::PackedScene::3982584559950823894::1706298901::1706298901::1::::<><>::
-character-soldier.glb::PackedScene::8986434089104737163::1706298901::1706298901::1::::<><>::
-column-damaged.glb::PackedScene::8998493034315525892::1706298901::1706298901::1::::<><>::
-column.glb::PackedScene::8614041288293480704::1706298901::1706298901::1::::<><>::
-floor-detail.glb::PackedScene::4924313952991975678::1706298901::1706298901::1::::<><>::
-floor.glb::PackedScene::8636891047207816488::1706298901::1706298901::1::::<><>::
-stairs-corner-inner.glb::PackedScene::4944029245066566761::1706298901::1706298901::1::::<><>::
-stairs-corner.glb::PackedScene::1544481652109383717::1706298901::1706298901::1::::<><>::
-stairs.glb::PackedScene::3841423173298570197::1706298901::1706298901::1::::<><>::
-statue.glb::PackedScene::4964396499374955834::1706298901::1706298901::1::::<><>::
-tree.glb::PackedScene::3698730928897638687::1706298901::1706298901::1::::<><>::
-trophy.glb::PackedScene::3962746292671053797::1706298901::1706298901::1::::<><>::
-wall-corner.glb::PackedScene::4471591872415696738::1706298901::1706298901::1::::<><>::
-wall-gate.glb::PackedScene::5965975964495216495::1706298901::1706298901::1::::<><>::
-wall.glb::PackedScene::7233266044455386681::1706298901::1706298901::1::::<><>::
-weapon-rack.glb::PackedScene::1035388039903663519::1706298901::1706298901::1::::<><>::
-weapon-spear.glb::PackedScene::2041471261791889469::1706298901::1706298901::1::::<><>::
-weapon-sword.glb::PackedScene::4098703203778164940::1706298901::1706298901::1::::<><>::
-::res://Assets/Characters/kenney_mini-arena/Models/GLB format/Textures/::1706305180
-colormap.png::CompressedTexture2D::6826028504060287645::1706298901::1706305180::1::::<><>::
-::res://Assets/Characters/kenney_mini-arena/Models/OBJ format/::1706298934
-banner.obj::Mesh::1651969256937580192::1706298901::1706298934::1::::<><>::
-block.obj::Mesh::7164546815351044445::1706298901::1706298934::1::::<><>::
-border-corner.obj::Mesh::6017154799929076462::1706298901::1706298934::1::::<><>::
-border-straight.obj::Mesh::8238322479371002278::1706298901::1706298934::1::::<><>::
-bricks.obj::Mesh::3310598718945337805::1706298901::1706298934::1::::<><>::
-character-soldier.obj::Mesh::4060255622313973458::1706298901::1706298934::1::::<><>::
-column-damaged.obj::Mesh::4460467083161460470::1706298901::1706298934::1::::<><>::
-column.obj::Mesh::3635044230057015770::1706298901::1706298934::1::::<><>::
-floor-detail.obj::Mesh::398175385836282331::1706298901::1706298933::1::::<><>::
-floor.obj::Mesh::4155504654870596054::1706298901::1706298933::1::::<><>::
-stairs-corner-inner.obj::Mesh::8163551333633777544::1706298901::1706298933::1::::<><>::
-stairs-corner.obj::Mesh::7921688886669472996::1706298901::1706298933::1::::<><>::
-stairs.obj::Mesh::2346929873400229195::1706298901::1706298933::1::::<><>::
-statue.obj::Mesh::4966565071805125473::1706298901::1706298933::1::::<><>::
-tree.obj::Mesh::5139720865902849524::1706298901::1706298933::1::::<><>::
-trophy.obj::Mesh::5161266479896688217::1706298901::1706298933::1::::<><>::
-wall-corner.obj::Mesh::7494016132279909691::1706298901::1706298932::1::::<><>::
-wall-gate.obj::Mesh::5706623044114829089::1706298901::1706298932::1::::<><>::
-wall.obj::Mesh::8862475940216961074::1706298901::1706298933::1::::<><>::
-weapon-rack.obj::Mesh::6001413799310566607::1706298901::1706298932::1::::<><>::
-weapon-spear.obj::Mesh::4261508071230894208::1706298901::1706298932::1::::<><>::
-weapon-sword.obj::Mesh::2741744209521290935::1706298901::1706298933::1::::<><>::
-::res://Assets/Characters/kenney_mini-arena/Models/OBJ format/Textures/::1706298901
-colormap.png::CompressedTexture2D::8461499172301396306::1706298901::1706298901::1::::<><>::
-::res://Assets/Characters/kenney_mini-arena/Previews/::1706298901
-banner.png::CompressedTexture2D::4568307775650362657::1706298901::1706298901::1::::<><>::
-block.png::CompressedTexture2D::993347006925595090::1706298901::1706298901::1::::<><>::
-border-corner.png::CompressedTexture2D::5724594091417148929::1706298901::1706298901::1::::<><>::
-border-straight.png::CompressedTexture2D::795653584940684304::1706298901::1706298901::1::::<><>::
-bricks.png::CompressedTexture2D::6289192777328632339::1706298901::1706298901::1::::<><>::
-character-soldier.png::CompressedTexture2D::197172820471997679::1706298901::1706298901::1::::<><>::
-column-damaged.png::CompressedTexture2D::8827068978581423714::1706298901::1706298901::1::::<><>::
-column.png::CompressedTexture2D::8779814949831303707::1706298901::1706298901::1::::<><>::
-floor-detail.png::CompressedTexture2D::7604506518391220513::1706298901::1706298901::1::::<><>::
-floor.png::CompressedTexture2D::3340663844560305796::1706298901::1706298901::1::::<><>::
-stairs-corner-inner.png::CompressedTexture2D::9132222501950633327::1706298901::1706298901::1::::<><>::
-stairs-corner.png::CompressedTexture2D::3872329571486755782::1706298901::1706298901::1::::<><>::
-stairs.png::CompressedTexture2D::1214773188834721356::1706298901::1706298901::1::::<><>::
-statue.png::CompressedTexture2D::2464570829319727425::1706298901::1706298901::1::::<><>::
-tree.png::CompressedTexture2D::8548985420854469123::1706298901::1706298901::1::::<><>::
-trophy.png::CompressedTexture2D::8967932718928436471::1706298901::1706298901::1::::<><>::
-wall-corner.png::CompressedTexture2D::8541940994815001754::1706298901::1706298901::1::::<><>::
-wall-gate.png::CompressedTexture2D::2512251074230943315::1706298901::1706298901::1::::<><>::
-wall.png::CompressedTexture2D::2420698560194777779::1706298901::1706298901::1::::<><>::
-weapon-rack.png::CompressedTexture2D::6804528256078518168::1706298901::1706298901::1::::<><>::
-weapon-spear.png::CompressedTexture2D::7691700572750931609::1706298901::1706298901::1::::<><>::
-weapon-sword.png::CompressedTexture2D::9128050242245894204::1706298901::1706298901::1::::<><>::
-::res://Assets/Scripts/::1706450296
-dummy_player.gd::GDScript::-1::1706450296::0::1::::<>Node3D<>::
-my_words.txt::TextFile::-1::1706391294::0::1::::<><>::
-::res://Assets/Sounds/::1706457019
-dizz (mp3cut.net).wav::AudioStreamWAV::7727468312665763066::1706443060::1706443211::1::::<><>::
-give_me_that_fat.wav::AudioStreamWAV::1582647132559290453::1706443060::1706443211::1::::<><>::
-give_me_that_slim (mp3cut.net).wav::AudioStreamWAV::3891429089118864553::1706457019::1706457025::1::::<><>::
-jump_smash (mp3cut.net).wav::AudioStreamWAV::3087992622115040771::1706443060::1706443211::1::::<><>::
-::res://Assets/Text/::1706397583
-words.txt::TextFile::-1::1706383796::0::1::::<><>::
-words_updated.txt::TextFile::-1::1706397580::0::1::::<><>::
-::res://Assets/Textures/::1706456252
-card1.png::CompressedTexture2D::4607941169518942556::1706456197::1706456252::1::::<><>::
-card2.png::CompressedTexture2D::8816741264903672137::1706456221::1706456252::1::::<><>::
-prompt.png::CompressedTexture2D::1796197680482973560::1706456228::1706456252::1::::<><>::
-::res://Assets/World/::1706457019
-barril1.glb::PackedScene::4285152215423798744::1706457019::1706457026::1::::<><>::uid://di3e310s8ri3p::::res://Assets/World/barril1_barrel_DefaultMaterial_BaseColor.png
-barril1_barrel_DefaultMaterial_BaseColor.png::CompressedTexture2D::7778869652587468159::1706457019::1706457025::1::::<><>::
-box1yellow.glb::PackedScene::8751304640523004210::1706457019::1706457026::1::::<><>::uid://b5c2s5eugqdld::::res://Assets/World/box1yellow_box1_DefaultMaterial_BaseColor.png
-box1yellow_box1_DefaultMaterial_BaseColor.png::CompressedTexture2D::4497887834234255973::1706457019::1706457025::1::::<><>::
-box2violet.glb::PackedScene::7038935539476632758::1706457019::1706457026::1::::<><>::uid://w12n2gtop6ck::::res://Assets/World/box2violet_box1_DefaultMaterial_BaseColor.png
-box2violet_box1_DefaultMaterial_BaseColor.png::CompressedTexture2D::1599492384049612418::1706457019::1706457025::1::::<><>::
-box3blue.glb::PackedScene::7325132250625579302::1706457019::1706457027::1::::<><>::uid://buntj4kqb5dyy::::res://Assets/World/box3blue_box1_DefaultMaterial_BaseColor.png
-box3blue_box1_DefaultMaterial_BaseColor.png::CompressedTexture2D::3818205701618917588::1706457019::1706457025::1::::<><>::
-cb_curved.glb::PackedScene::2583474051533272795::1706403250::1706403314::1::::<><>::
-conveyor_belt (1).glb::PackedScene::365947670589491088::1706403250::1706403314::1::::<><>::
-frame.glb::PackedScene::5489772809214409897::1706403250::1706403313::1::::<><>::
-room (1).glb::PackedScene::8510795204377960262::1706403250::1706403313::1::::<><>::
-room (1)_backwall.png::CompressedTexture2D::8697453226596000199::1706403250::1706403305::1::::<><>::
-room (1)_floor.png::CompressedTexture2D::3279014387765964234::1706403250::1706403305::1::::<><>::
-room (1)_leftwall.png::CompressedTexture2D::3148900153508978698::1706403250::1706403305::1::::<><>::
-room (1)_rightwall.png::CompressedTexture2D::6347289633346275216::1706403250::1706403305::1::::<><>::
-room (2).glb::PackedScene::7184012564426812856::1706457019::1706457027::1::::<><>::uid://cyw2j4h8wsflj::::res://Assets/World/room (2)_backwall.png<>uid://ddjyfsd0snvo0::::res://Assets/World/room (2)_leftwall.png<>uid://bqkev3iar2tki::::res://Assets/World/room (2)_rightwall.png<>uid://dhaiqvltqj664::::res://Assets/World/room (2)_floor_variant.png
-room (2)_backwall.png::CompressedTexture2D::6504446891758400099::1706457019::1706457025::1::::<><>::
-room (2)_floor_variant.png::CompressedTexture2D::7651099386058386591::1706457019::1706457025::1::::<><>::
-room (2)_leftwall.png::CompressedTexture2D::7389875069791049137::1706457019::1706457025::1::::<><>::
-room (2)_rightwall.png::CompressedTexture2D::3530367812121326224::1706457019::1706457025::1::::<><>::
-room.glb::PackedScene::3541752219613238720::1706403251::1706403313::1::::<><>::
-room_backwall.png::CompressedTexture2D::6180995141630732029::1706403251::1706403305::1::::<><>::
-room_floor.png::CompressedTexture2D::5685096718931295216::1706403251::1706403305::1::::<><>::
-room_leftwall.png::CompressedTexture2D::1465155141290790587::1706403251::1706403305::1::::<><>::
-room_rightwall.png::CompressedTexture2D::5318189674528751914::1706403251::1706403305::1::::<><>::
-tube_scenary.glb::PackedScene::139014976552146650::1706403251::1706403312::1::::<><>::
-word_spawner_tube.glb::PackedScene::264545203784045593::1706403251::1706403312::1::::<><>::
-::res://Globals/::1706443060
-gamemanager.gd::GDScript::-1::1706443060::0::1::::<>Node<>::
-::res://Scenes/::1706457019
-AnimationPlayer.gd::GDScript::-1::1706403251::0::1::::<>AnimationPlayer<>::
-answer_box.gd::GDScript::-1::1706448888::0::1::::<>Area3D<>::
-answer_card_button.gd::GDScript::-1::1706378799::0::1::::<>Button<>::
-bellyguy_red.gd::GDScript::-1::1706403251::0::1::::<>Node3D<>::
-bellyguy_red.tscn::PackedScene::8231879127288743960::1706443696::0::1::::<><>::uid://386gdilof3nx::::res://Assets/Characters/bellyguyRED.glb<>res://Scenes/bellyguy_red.gd
-bigode6.gd::GDScript::-1::1706403251::0::1::::<>Node3D<>::
-bigode6.tscn::PackedScene::5147694705020152303::1706403251::0::1::::<><>::uid://xkwrm11enbi7::::res://Assets/Characters/bigode6.glb<>res://Scenes/bigode6.gd
-bigode.tscn::PackedScene::1880545766172735973::1706403251::0::1::::<><>::
-bigodechapeu.gd::GDScript::-1::1706403251::0::1::::<>Node3D<>::
-bigodechapeu.tscn::PackedScene::1064830104521952713::1706443696::0::1::::<><>::uid://dygf1pv4s4dje::::res://Assets/Characters/bigodechapel2.glb<>res://Scenes/bigodechapeu.gd
-bigode_1.gd::GDScript::-1::1706403251::0::1::::<>Node3D<>::
-bigode_1.tscn::PackedScene::8949014671213202962::1706403251::0::1::::<><>::uid://32wgnxcn4eg3::::res://Assets/Characters/BIGODE1.glb<>res://Scenes/bigode_1.gd
-bigode_5.gd::GDScript::-1::1706403251::0::1::::<>Node3D<>::
-bigode_5.tscn::PackedScene::6497354595485112421::1706403251::0::1::::<><>::uid://dqtttlp0qwt0w::::res://Assets/Characters/bigode5.glb<>res://Scenes/bigode_5.gd
-bigode_7.gd::GDScript::-1::1706403251::0::1::::<>Node3D<>::
-bigode_7.tscn::PackedScene::7663647567236821986::1706443696::0::1::::<><>::uid://b4visc535ob8o::::res://Assets/Characters/bigode7.glb<>res://Scenes/bigode_7.gd
-box.tscn::PackedScene::1494989857102083130::1706456727::0::1::::<><>::res://Scenes/movable_object.gd
-choice_container.tscn::PackedScene::2544954174599290651::1706397627::0::1::::<><>::
-conveyor.gd::GDScript::-1::1706443060::0::1::::<>Node3D<>::
-conveyor.tscn::PackedScene::7442682158873319466::1706456727::0::1::::<><>::res://Scenes/conveyor.gd
-fatty1.gd::GDScript::-1::1706403251::0::1::::<>Node3D<>::
-fatty1.tscn::PackedScene::7784387868779192197::1706403251::0::1::::<><>::uid://b3xlljvottdrs::::res://Assets/Characters/bellyheisenberg.glb<>res://Scenes/fatty1.gd
-fatty_2.gd::GDScript::-1::1706403251::0::1::::<>Node3D<>::
-fatty_2.tscn::PackedScene::5741526500427691045::1706443696::0::1::::<><>::uid://drq2l771epcgi::::res://Assets/Characters/bellyheisenberg2.glb<>res://Scenes/fatty_2.gd
-game_manager.gd::GDScript::-1::1706457019::0::1::::<>Node3D<>::
-level1.gd::GDScript::-1::1706457019::0::1::::<>Node3D<>::
-level1.tscn::PackedScene::5835770142491426769::1706457019::0::1::::<><>::res://Scenes/level1.gd<>uid://bqpwe2xp6ilu3::::res://Assets/World/room.glb<>uid://bnc5vqjarvlwt::::res://Scenes/player1.tscn<>uid://dtixs26warhmk::::res://Assets/World/room (1).glb<>uid://fhjds856yo2s::::res://Assets/World/conveyor_belt (1).glb<>uid://bc2po731loyp4::::res://Assets/World/cb_curved.glb<>uid://debj5gi2h341s::::res://Scenes/conveyor.tscn<>uid://ce3cpapou43nf::::res://Scenes/spawner.tscn<>res://Scenes/answer_box.gd<>uid://uf366rv657r5::::res://Scenes/player3.1.tscn<>uid://d3fg18fe0ib4n::::res://Scenes/player2.tscn<>uid://5131o4723smh::::res://Scenes/player4.tscn<>uid://d1faydylpfa4::::res://Assets/World/word_spawner_tube.glb
-main.gd::GDScript::-1::1706358068::0::1::::<>Node3D<>::
-main.tscn::PackedScene::1937970077041182697::1706443060::0::1::::<><>::uid://debj5gi2h341s::::res://Scenes/conveyor.tscn<>res://Scenes/main.gd<>uid://vkgi816ih4i5::::res://Scenes/box.tscn<>uid://bnc5vqjarvlwt::::res://Scenes/player1.tscn<>uid://d0q771tvybgl3::::res://Scenes/bigode_1.tscn<>uid://cytmql61meqf2::::res://Scenes/bigode_5.tscn<>uid://dstrox63vsafw::::res://Scenes/player3.tscn<>uid://uf366rv657r5::::res://Scenes/player3.1.tscn
-merged.tscn::PackedScene::6555386017189120830::1706456728::0::1::::<><>::res://Scenes/game_manager.gd<>uid://cpe5jttgrcodt::::res://Scenes/level1.tscn<>uid://bq785l1wmksxa::::res://Scenes/text_input.tscn
-movable_object.gd::GDScript::-1::1706446338::0::1::::<>RigidBody3D<>::
-player1.gd::GDScript::-1::1706457019::0::1::::<>CharacterBody3D<>::
-player1.tscn::PackedScene::3304864272251036963::1706457019::0::1::::<><>::res://Scenes/player1.gd<>uid://dhglfkb78qjdi::::res://Scenes/bigode_7.tscn<>uid://pf2uji6p6xxx::::res://Scenes/bigodechapeu.tscn<>uid://didijk4yhc3va::::res://Assets/Sounds/dizz (mp3cut.net).wav
-player2.gd::GDScript::-1::1706457019::0::1::::<>CharacterBody3D<>::
-player2.tscn::PackedScene::9135284035522678395::1706457019::0::1::::<><>::res://Scenes/player2.gd<>uid://dhglfkb78qjdi::::res://Scenes/bigode_7.tscn
-player3.1.gd::GDScript::-1::1706457019::0::1::::<>CharacterBody3D<>::
-player3.1.tscn::PackedScene::1415855852421775904::1706457019::0::1::::<><>::res://Scenes/player3.1.gd<>uid://cn2idqvfqodjx::::res://Scenes/fatty_2.tscn<>uid://wsv74504nk7v::::res://Assets/Sounds/give_me_that_fat.wav<>uid://bj8311fatemb8::::res://Assets/Sounds/jump_smash (mp3cut.net).wav
-player3.gd::GDScript::-1::1706443060::0::1::::<>CharacterBody3D<>::
-player3.tscn::PackedScene::8462942861109673056::1706403251::0::1::::<><>::uid://bnc5vqjarvlwt::::res://Scenes/player1.tscn<>res://Scenes/player3.gd
-player4.gd::GDScript::-1::1706457019::0::1::::<>CharacterBody3D<>::
-player4.tscn::PackedScene::2161086418802880439::1706457019::0::1::::<><>::res://Scenes/player4.gd<>uid://dpjt31ufwtbsy::::res://Scenes/bellyguy_red.tscn
-player.gd::GDScript::-1::1706305038::0::1::::<>CharacterBody3D<>::
-player.tscn::PackedScene::4813406417627273084::1706305038::0::1::::<><>::res://Scenes/player.gd<>uid://d1bdiyr8xuvcd::::res://Assets/Characters/kenney_mini-arena/Models/GLB format/character-soldier.glb
-spawner.tscn::PackedScene::5111547563782173271::1706457019::0::1::::<><>::res://Spawner.gd<>uid://vkgi816ih4i5::::res://Scenes/box.tscn
-text_input.gd::GDScript::-1::1706456645::0::1::::<>Node3D<>::
-text_input.tscn::PackedScene::3577560123547768614::1706456727::0::1::::<><>::res://Scenes/text_input.gd<>uid://0udd4b5eo7no::::res://Assets/Textures/prompt.png<>uid://bci2a2davas7d::::res://Scenes/choice_container.tscn<>res://Scenes/answer_card_button.gd<>res://Assets/Scripts/dummy_player.gd<>uid://b6weeahk7cje7::::res://Assets/Textures/card1.png<>uid://dxu5o8hb513u8::::res://Assets/Textures/card2.png
+::res://::1706457638
+icon.svg::CompressedTexture2D::7650057786587191090::1706303773::1706303773::1::::<><>::
+Spawner.gd::GDScript::-1::1706453460::0::1::::<>Node3D<>::
+UI.tscn::PackedScene::7370764466196771484::1706451640::0::1::::<><>::
+::res://Assets/::1706456948
+::res://Assets/Characters/::1706451597
+bellyguy3.glb::PackedScene::5857647451019908241::1706451596::1706451596::1::::<><>::
+bellyguy.glb::PackedScene::8027177656192850875::1706451596::1706451596::1::::<><>::
+bellyguyRED.glb::PackedScene::2035305199735282601::1706451596::1706451596::1::::<><>::
+bellyheisenberg2.glb::PackedScene::8387163170896662868::1706451596::1706451596::1::::<><>::
+bellyheisenberg.glb::PackedScene::4399877030368048808::1706451596::1706451596::1::::<><>::
+BIGODE1.glb::PackedScene::2022373028272253616::1706451596::1706451596::1::::<><>::
+bigode3.gltf::PackedScene::4828659500794476427::1706451597::1706451597::1::::<><>::
+bigode4.glb::PackedScene::3756333178059409729::1706451597::1706451597::1::::<><>::
+bigode5.glb::PackedScene::8322694881648785220::1706451597::1706451597::1::::<><>::
+bigode6.glb::PackedScene::1636353985184883356::1706451597::1706451597::1::::<><>::
+bigode7.glb::PackedScene::4465767114967382596::1706451597::1706451597::1::::<><>::
+bigodechapel1.glb::PackedScene::4009361114558294913::1706451597::1706451597::1::::<><>::
+bigodechapel2.glb::PackedScene::8856531402155768490::1706451597::1706451597::1::::<><>::
+bigodechapel2_bigodeparabake_Material.png::CompressedTexture2D::1744410091518963239::1706451597::1706451597::1::::<><>::
+bigodechapel2_bigodeparabake_Material_2.png::CompressedTexture2D::7145456156575073808::1706451597::1706451597::1::::<><>::
+bigodechapel2_bigodeparabake_Material_3.png::CompressedTexture2D::7507747925914976412::1706451597::1706451597::1::::<><>::
+bigodechapel2_bigodeparabake_Material_4.png::CompressedTexture2D::2787469823550723538::1706451597::1706451597::1::::<><>::
+bigodechapel2_bigodeparabake_Material_BaseColor.png::CompressedTexture2D::3486174262464829842::1706451597::1706451597::1::::<><>::
+bigodetex1 (1).gltf::PackedScene::1264026680408830295::1706451597::1706451597::1::::<><>::
+bigodetex1.gltf::PackedScene::8848182018160451656::1706451597::1706451597::1::::<><>::
+::res://Assets/Characters/kenney_mini-arena/::1706303814
+License.txt::TextFile::-1::1706303773::0::1::::<><>::
+Preview.png::CompressedTexture2D::499051585272252797::1706303773::1706303814::1::::<><>::
+Sample.png::CompressedTexture2D::6714429985848764327::1706303773::1706303773::1::::<><>::
+::res://Assets/Characters/kenney_mini-arena/Models/::1706303773
+::res://Assets/Characters/kenney_mini-arena/Models/FBX format/::1706303773
+::res://Assets/Characters/kenney_mini-arena/Models/FBX format/Textures/::1706303773
+colormap.png::CompressedTexture2D::2747172082439424999::1706303773::1706303773::1::::<><>::
+::res://Assets/Characters/kenney_mini-arena/Models/GLB format/::1706303773
+banner.glb::PackedScene::3724148044489195707::1706303773::1706303773::1::::<><>::
+block.glb::PackedScene::9146280325739809404::1706303773::1706303773::1::::<><>::
+border-corner.glb::PackedScene::5167462115009178513::1706303773::1706303773::1::::<><>::
+border-straight.glb::PackedScene::7697837690738231166::1706303773::1706303773::1::::<><>::
+bricks.glb::PackedScene::3982584559950823894::1706303773::1706303773::1::::<><>::
+character-soldier.glb::PackedScene::8986434089104737163::1706303773::1706303773::1::::<><>::
+column-damaged.glb::PackedScene::8998493034315525892::1706303773::1706303773::1::::<><>::
+column.glb::PackedScene::8614041288293480704::1706303773::1706303773::1::::<><>::
+floor-detail.glb::PackedScene::4924313952991975678::1706303773::1706303773::1::::<><>::
+floor.glb::PackedScene::8636891047207816488::1706303773::1706303773::1::::<><>::
+stairs-corner-inner.glb::PackedScene::4944029245066566761::1706303773::1706303773::1::::<><>::
+stairs-corner.glb::PackedScene::1544481652109383717::1706303773::1706303773::1::::<><>::
+stairs.glb::PackedScene::3841423173298570197::1706303773::1706303773::1::::<><>::
+statue.glb::PackedScene::4964396499374955834::1706303773::1706303773::1::::<><>::
+tree.glb::PackedScene::3698730928897638687::1706303773::1706303773::1::::<><>::
+trophy.glb::PackedScene::3962746292671053797::1706303773::1706303773::1::::<><>::
+wall-corner.glb::PackedScene::4471591872415696738::1706303773::1706303773::1::::<><>::
+wall-gate.glb::PackedScene::5965975964495216495::1706303773::1706303773::1::::<><>::
+wall.glb::PackedScene::7233266044455386681::1706303773::1706303773::1::::<><>::
+weapon-rack.glb::PackedScene::1035388039903663519::1706303773::1706303773::1::::<><>::
+weapon-spear.glb::PackedScene::2041471261791889469::1706303773::1706303773::1::::<><>::
+weapon-sword.glb::PackedScene::4098703203778164940::1706303773::1706303773::1::::<><>::
+::res://Assets/Characters/kenney_mini-arena/Models/GLB format/Textures/::1706304113
+colormap.png::CompressedTexture2D::6826028504060287645::1706303773::1706304113::1::::<><>::
+::res://Assets/Characters/kenney_mini-arena/Models/OBJ format/::1706309486
+banner.obj::Mesh::1651969256937580192::1706303773::1706303773::1::::<><>::
+block.obj::Mesh::7164546815351044445::1706303773::1706303773::1::::<><>::
+border-corner.obj::Mesh::6017154799929076462::1706303773::1706303773::1::::<><>::
+border-straight.obj::Mesh::8238322479371002278::1706303773::1706303773::1::::<><>::
+bricks.obj::Mesh::3310598718945337805::1706303773::1706303773::1::::<><>::
+character-soldier.obj::Mesh::4060255622313973458::1706303773::1706309486::1::::<><>::
+column-damaged.obj::Mesh::4460467083161460470::1706303773::1706303773::1::::<><>::
+column.obj::Mesh::3635044230057015770::1706303773::1706303773::1::::<><>::
+floor-detail.obj::Mesh::398175385836282331::1706303773::1706303773::1::::<><>::
+floor.obj::Mesh::4155504654870596054::1706303773::1706303773::1::::<><>::
+stairs-corner-inner.obj::Mesh::8163551333633777544::1706303773::1706303773::1::::<><>::
+stairs-corner.obj::Mesh::7921688886669472996::1706303773::1706303773::1::::<><>::
+stairs.obj::Mesh::2346929873400229195::1706303773::1706303773::1::::<><>::
+statue.obj::Mesh::4966565071805125473::1706303773::1706303773::1::::<><>::
+tree.obj::Mesh::5139720865902849524::1706303773::1706303773::1::::<><>::
+trophy.obj::Mesh::5161266479896688217::1706303773::1706303773::1::::<><>::
+wall-corner.obj::Mesh::7494016132279909691::1706303773::1706303773::1::::<><>::
+wall-gate.obj::Mesh::5706623044114829089::1706303773::1706303773::1::::<><>::
+wall.obj::Mesh::8862475940216961074::1706303773::1706303773::1::::<><>::
+weapon-rack.obj::Mesh::6001413799310566607::1706303773::1706303773::1::::<><>::
+weapon-spear.obj::Mesh::4261508071230894208::1706303773::1706303773::1::::<><>::
+weapon-sword.obj::Mesh::2741744209521290935::1706303773::1706303773::1::::<><>::
+::res://Assets/Characters/kenney_mini-arena/Models/OBJ format/Textures/::1706303773
+colormap.png::CompressedTexture2D::8461499172301396306::1706303773::1706303773::1::::<><>::
+::res://Assets/Characters/kenney_mini-arena/Previews/::1706303773
+banner.png::CompressedTexture2D::4568307775650362657::1706303773::1706303773::1::::<><>::
+block.png::CompressedTexture2D::993347006925595090::1706303773::1706303773::1::::<><>::
+border-corner.png::CompressedTexture2D::5724594091417148929::1706303773::1706303773::1::::<><>::
+border-straight.png::CompressedTexture2D::795653584940684304::1706303773::1706303773::1::::<><>::
+bricks.png::CompressedTexture2D::6289192777328632339::1706303773::1706303773::1::::<><>::
+character-soldier.png::CompressedTexture2D::197172820471997679::1706303773::1706303773::1::::<><>::
+column-damaged.png::CompressedTexture2D::8827068978581423714::1706303773::1706303773::1::::<><>::
+column.png::CompressedTexture2D::8779814949831303707::1706303773::1706303773::1::::<><>::
+floor-detail.png::CompressedTexture2D::7604506518391220513::1706303773::1706303773::1::::<><>::
+floor.png::CompressedTexture2D::3340663844560305796::1706303773::1706303773::1::::<><>::
+stairs-corner-inner.png::CompressedTexture2D::9132222501950633327::1706303773::1706303773::1::::<><>::
+stairs-corner.png::CompressedTexture2D::3872329571486755782::1706303773::1706303773::1::::<><>::
+stairs.png::CompressedTexture2D::1214773188834721356::1706303773::1706303773::1::::<><>::
+statue.png::CompressedTexture2D::2464570829319727425::1706303773::1706303773::1::::<><>::
+tree.png::CompressedTexture2D::8548985420854469123::1706303773::1706303773::1::::<><>::
+trophy.png::CompressedTexture2D::8967932718928436471::1706303773::1706303773::1::::<><>::
+wall-corner.png::CompressedTexture2D::8541940994815001754::1706303773::1706303773::1::::<><>::
+wall-gate.png::CompressedTexture2D::2512251074230943315::1706303773::1706303773::1::::<><>::
+wall.png::CompressedTexture2D::2420698560194777779::1706303773::1706303773::1::::<><>::
+weapon-rack.png::CompressedTexture2D::6804528256078518168::1706303773::1706303773::1::::<><>::
+weapon-spear.png::CompressedTexture2D::7691700572750931609::1706303773::1706303773::1::::<><>::
+weapon-sword.png::CompressedTexture2D::9128050242245894204::1706303773::1706303773::1::::<><>::
+::res://Assets/Scripts/::1706451640
+dummy_player.gd::GDScript::-1::1706451640::0::1::::<>Node3D<>::
+my_words.txt::TextFile::-1::1706451597::0::1::::<><>::
+::res://Assets/Sounds/::1706456953
+dizz (mp3cut.net).wav::AudioStreamWAV::7727468312665763066::1706451597::1706451597::1::::<><>::
+give_me_that_fat.wav::AudioStreamWAV::1582647132559290453::1706451597::1706451597::1::::<><>::
+give_me_that_slim (mp3cut.net).wav::AudioStreamWAV::3891429089118864553::1706456953::1706456953::1::::<><>::
+jump_smash (mp3cut.net).wav::AudioStreamWAV::3087992622115040771::1706451597::1706451597::1::::<><>::
+::res://Assets/Text/::1706451597
+words.txt::TextFile::-1::1706451597::0::1::::<><>::
+words_updated.txt::TextFile::-1::1706451597::0::1::::<><>::
+::res://Assets/Textures/::1706457002
+card1.png::CompressedTexture2D::4607941169518942556::1706456948::1706457002::1::::<><>::
+card2.png::CompressedTexture2D::8816741264903672137::1706456948::1706457002::1::::<><>::
+prompt.png::CompressedTexture2D::1796197680482973560::1706456948::1706457002::1::::<><>::
+::res://Assets/World/::1706456953
+barril1.glb::PackedScene::4285152215423798744::1706456953::1706456953::1::::<><>::
+barril1_barrel_DefaultMaterial_BaseColor.png::CompressedTexture2D::7778869652587468159::1706456953::1706456953::1::::<><>::
+box1yellow.glb::PackedScene::8751304640523004210::1706456953::1706456953::1::::<><>::
+box1yellow_box1_DefaultMaterial_BaseColor.png::CompressedTexture2D::4497887834234255973::1706456953::1706456953::1::::<><>::
+box2violet.glb::PackedScene::7038935539476632758::1706456953::1706456953::1::::<><>::
+box2violet_box1_DefaultMaterial_BaseColor.png::CompressedTexture2D::1599492384049612418::1706456953::1706456953::1::::<><>::
+box3blue.glb::PackedScene::7325132250625579302::1706456953::1706456953::1::::<><>::
+box3blue_box1_DefaultMaterial_BaseColor.png::CompressedTexture2D::3818205701618917588::1706456953::1706456953::1::::<><>::
+cb_curved.glb::PackedScene::2583474051533272795::1706451597::1706451597::1::::<><>::
+conveyor_belt (1).glb::PackedScene::365947670589491088::1706451597::1706451597::1::::<><>::
+frame.glb::PackedScene::5489772809214409897::1706451597::1706451597::1::::<><>::
+room (1).glb::PackedScene::8510795204377960262::1706451597::1706451597::1::::<><>::
+room (1)_backwall.png::CompressedTexture2D::8697453226596000199::1706451597::1706451597::1::::<><>::
+room (1)_floor.png::CompressedTexture2D::3279014387765964234::1706451597::1706451597::1::::<><>::
+room (1)_leftwall.png::CompressedTexture2D::3148900153508978698::1706451597::1706451597::1::::<><>::
+room (1)_rightwall.png::CompressedTexture2D::6347289633346275216::1706451597::1706451597::1::::<><>::
+room (2).glb::PackedScene::7184012564426812856::1706456953::1706456953::1::::<><>::
+room (2)_backwall.png::CompressedTexture2D::6504446891758400099::1706456953::1706456953::1::::<><>::
+room (2)_floor_variant.png::CompressedTexture2D::7651099386058386591::1706456953::1706456953::1::::<><>::
+room (2)_leftwall.png::CompressedTexture2D::7389875069791049137::1706456953::1706456953::1::::<><>::
+room (2)_rightwall.png::CompressedTexture2D::3530367812121326224::1706456953::1706456953::1::::<><>::
+room.glb::PackedScene::3541752219613238720::1706451597::1706451597::1::::<><>::
+room_backwall.png::CompressedTexture2D::6180995141630732029::1706451597::1706451597::1::::<><>::
+room_floor.png::CompressedTexture2D::5685096718931295216::1706451597::1706451597::1::::<><>::
+room_leftwall.png::CompressedTexture2D::1465155141290790587::1706451597::1706451597::1::::<><>::
+room_rightwall.png::CompressedTexture2D::5318189674528751914::1706451597::1706451597::1::::<><>::
+tube_scenary.glb::PackedScene::139014976552146650::1706451597::1706451597::1::::<><>::
+word_spawner_tube.glb::PackedScene::264545203784045593::1706451597::1706451597::1::::<><>::
+::res://Globals/::1706451597
+gamemanager.gd::GDScript::-1::1706451597::0::1::::<>Node<>::
+::res://Scenes/::1706457629
+AnimationPlayer.gd::GDScript::-1::1706451597::0::1::::<>AnimationPlayer<>::
+answer_box.gd::GDScript::-1::1706451640::0::1::::<>Area3D<>::
+answer_card_button.gd::GDScript::-1::1706451597::0::1::::<>Button<>::
+bellyguy_red.gd::GDScript::-1::1706451597::0::1::::<>Node3D<>::
+bellyguy_red.tscn::PackedScene::8231879127288743960::1706451640::0::1::::<><>::uid://386gdilof3nx::::res://Assets/Characters/bellyguyRED.glb<>res://Scenes/bellyguy_red.gd
+bigode6.gd::GDScript::-1::1706451597::0::1::::<>Node3D<>::
+bigode6.tscn::PackedScene::5147694705020152303::1706451597::0::1::::<><>::uid://xkwrm11enbi7::::res://Assets/Characters/bigode6.glb<>res://Scenes/bigode6.gd
+bigode.tscn::PackedScene::1880545766172735973::1706451597::0::1::::<><>::
+bigodechapeu.gd::GDScript::-1::1706451597::0::1::::<>Node3D<>::
+bigodechapeu.tscn::PackedScene::1064830104521952713::1706451640::0::1::::<><>::uid://dygf1pv4s4dje::::res://Assets/Characters/bigodechapel2.glb<>res://Scenes/bigodechapeu.gd
+bigode_1.gd::GDScript::-1::1706451597::0::1::::<>Node3D<>::
+bigode_1.tscn::PackedScene::8949014671213202962::1706451597::0::1::::<><>::uid://32wgnxcn4eg3::::res://Assets/Characters/BIGODE1.glb<>res://Scenes/bigode_1.gd
+bigode_5.gd::GDScript::-1::1706451597::0::1::::<>Node3D<>::
+bigode_5.tscn::PackedScene::6497354595485112421::1706451597::0::1::::<><>::uid://dqtttlp0qwt0w::::res://Assets/Characters/bigode5.glb<>res://Scenes/bigode_5.gd
+bigode_7.gd::GDScript::-1::1706451597::0::1::::<>Node3D<>::
+bigode_7.tscn::PackedScene::7663647567236821986::1706451640::0::1::::<><>::uid://b4visc535ob8o::::res://Assets/Characters/bigode7.glb<>res://Scenes/bigode_7.gd
+box.tscn::PackedScene::1494989857102083130::1706457599::0::1::::<><>::res://Scenes/movable_object.gd
+choice_container.tscn::PackedScene::2544954174599290651::1706451597::0::1::::<><>::
+conveyor.gd::GDScript::-1::1706451597::0::1::::<>Node3D<>::
+conveyor.tscn::PackedScene::7442682158873319466::1706457599::0::1::::<><>::res://Scenes/conveyor.gd
+fatty1.gd::GDScript::-1::1706451597::0::1::::<>Node3D<>::
+fatty1.tscn::PackedScene::7784387868779192197::1706451597::0::1::::<><>::uid://b3xlljvottdrs::::res://Assets/Characters/bellyheisenberg.glb<>res://Scenes/fatty1.gd
+fatty_2.gd::GDScript::-1::1706451597::0::1::::<>Node3D<>::
+fatty_2.tscn::PackedScene::5741526500427691045::1706451640::0::1::::<><>::uid://drq2l771epcgi::::res://Assets/Characters/bellyheisenberg2.glb<>res://Scenes/fatty_2.gd
+game_manager.gd::GDScript::-1::1706457629::0::1::::<>Node3D<>::
+level1.gd::GDScript::-1::1706456953::0::1::::<>Node3D<>::
+level1.tscn::PackedScene::5835770142491426769::1706457629::0::1::::<><>::res://Scenes/level1.gd<>uid://bqpwe2xp6ilu3::::res://Assets/World/room.glb<>uid://bnc5vqjarvlwt::::res://Scenes/player1.tscn<>uid://dtixs26warhmk::::res://Assets/World/room (1).glb<>uid://fhjds856yo2s::::res://Assets/World/conveyor_belt (1).glb<>uid://bc2po731loyp4::::res://Assets/World/cb_curved.glb<>uid://debj5gi2h341s::::res://Scenes/conveyor.tscn<>uid://ce3cpapou43nf::::res://Scenes/spawner.tscn<>res://Scenes/answer_box.gd<>uid://uf366rv657r5::::res://Scenes/player3.1.tscn<>uid://d3fg18fe0ib4n::::res://Scenes/player2.tscn<>uid://5131o4723smh::::res://Scenes/player4.tscn<>uid://d1faydylpfa4::::res://Assets/World/word_spawner_tube.glb
+main.gd::GDScript::-1::1706451597::0::1::::<>Node3D<>::
+main.tscn::PackedScene::1937970077041182697::1706451640::0::1::::<><>::uid://debj5gi2h341s::::res://Scenes/conveyor.tscn<>res://Scenes/main.gd<>uid://vkgi816ih4i5::::res://Scenes/box.tscn<>uid://bnc5vqjarvlwt::::res://Scenes/player1.tscn<>uid://d0q771tvybgl3::::res://Scenes/bigode_1.tscn<>uid://cytmql61meqf2::::res://Scenes/bigode_5.tscn<>uid://dstrox63vsafw::::res://Scenes/player3.tscn<>uid://uf366rv657r5::::res://Scenes/player3.1.tscn
+merged.tscn::PackedScene::6555386017189120830::1706457629::0::1::::<><>::res://Scenes/game_manager.gd<>uid://cpe5jttgrcodt::::res://Scenes/level1.tscn<>uid://bq785l1wmksxa::::res://Scenes/text_input.tscn
+movable_object.gd::GDScript::-1::1706457629::0::1::::<>RigidBody3D<>::
+player1.gd::GDScript::-1::1706457629::0::1::::<>CharacterBody3D<>::
+player1.tscn::PackedScene::3304864272251036963::1706457629::0::1::::<><>::res://Scenes/player1.gd<>uid://dhglfkb78qjdi::::res://Scenes/bigode_7.tscn<>uid://pf2uji6p6xxx::::res://Scenes/bigodechapeu.tscn<>uid://didijk4yhc3va::::res://Assets/Sounds/dizz (mp3cut.net).wav
+player2.gd::GDScript::-1::1706457629::0::1::::<>CharacterBody3D<>::
+player2.tscn::PackedScene::9135284035522678395::1706457629::0::1::::<><>::res://Scenes/player2.gd<>uid://dhglfkb78qjdi::::res://Scenes/bigode_7.tscn
+player3.1.gd::GDScript::-1::1706457629::0::1::::<>CharacterBody3D<>::
+player3.1.tscn::PackedScene::1415855852421775904::1706457629::0::1::::<><>::res://Scenes/player3.1.gd<>uid://cn2idqvfqodjx::::res://Scenes/fatty_2.tscn<>uid://wsv74504nk7v::::res://Assets/Sounds/give_me_that_fat.wav<>uid://bj8311fatemb8::::res://Assets/Sounds/jump_smash (mp3cut.net).wav
+player3.gd::GDScript::-1::1706451597::0::1::::<>CharacterBody3D<>::
+player3.tscn::PackedScene::8462942861109673056::1706451597::0::1::::<><>::uid://bnc5vqjarvlwt::::res://Scenes/player1.tscn<>res://Scenes/player3.gd
+player4.gd::GDScript::-1::1706457629::0::1::::<>CharacterBody3D<>::
+player4.tscn::PackedScene::2161086418802880439::1706457629::0::1::::<><>::res://Scenes/player4.gd<>uid://dpjt31ufwtbsy::::res://Scenes/bellyguy_red.tscn
+player.gd::GDScript::-1::1706320176::0::1::::<>CharacterBody3D<>::
+player.tscn::PackedScene::4813406417627273084::1706320176::0::1::::<><>::res://Scenes/player.gd<>uid://d1bdiyr8xuvcd::::res://Assets/Characters/kenney_mini-arena/Models/GLB format/character-soldier.glb
+spawner.tscn::PackedScene::5111547563782173271::1706457629::0::1::::<><>::res://Spawner.gd<>uid://vkgi816ih4i5::::res://Scenes/box.tscn
+text_input.gd::GDScript::-1::1706457629::0::1::::<>Node3D<>::
+text_input.tscn::PackedScene::3577560123547768614::1706457628::0::1::::<><>::res://Scenes/text_input.gd<>uid://0udd4b5eo7no::::res://Assets/Textures/prompt.png<>uid://bci2a2davas7d::::res://Scenes/choice_container.tscn<>res://Scenes/answer_card_button.gd<>res://Assets/Scripts/dummy_player.gd<>uid://b6weeahk7cje7::::res://Assets/Textures/card1.png<>uid://dxu5o8hb513u8::::res://Assets/Textures/card2.png
