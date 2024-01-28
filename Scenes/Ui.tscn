@@ -1,0 +1,311 @@
+[gd_scene load_steps=15 format=3 uid="uid://cafspwggw4as3"]
+
+[ext_resource type="Script" path="res://Scenes/Ui.gd" id="1_mlqpi"]
+[ext_resource type="FontFile" uid="uid://bmhc12n0hn2n7" path="res://Assets/Text/Hammerhead-Bold.ttf" id="1_upc57"]
+[ext_resource type="Texture2D" uid="uid://cm85yhqrlpgl1" path="res://Assets/World/room_floor.png" id="2_75pae"]
+[ext_resource type="Texture2D" uid="uid://bn6rycqw7vvwr" path="res://Assets/World/conveyor1.png" id="3_ag8ah"]
+[ext_resource type="Texture2D" uid="uid://dwnopx0dbd1wd" path="res://Assets/World/conveyor3.png" id="4_n840h"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ylk67"]
+blend_mode = 1
+
+[sub_resource type="Animation" id="Animation_b0jmk"]
+resource_name = "play_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -2.5), Vector2(800, 0), Vector2(800, -400)]
+}
+
+[sub_resource type="Animation" id="Animation_1v5c3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(200, -100)]
+}
+
+[sub_resource type="Animation" id="Animation_go1hc"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -2.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m27xl"]
+_data = {
+"RESET": SubResource("Animation_1v5c3"),
+"idle": SubResource("Animation_go1hc"),
+"play_animation": SubResource("Animation_b0jmk")
+}
+
+[sub_resource type="Animation" id="Animation_hw7on"]
+resource_name = "quit_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -2.5), Vector2(2000, -2.5)]
+}
+
+[sub_resource type="Animation" id="Animation_mky44"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -2.5)]
+}
+
+[sub_resource type="Animation" id="Animation_adxow"]
+resource_name = "quitidle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8xfv2"]
+_data = {
+"RESET": SubResource("Animation_mky44"),
+"quit_animation": SubResource("Animation_hw7on"),
+"quitidle": SubResource("Animation_adxow")
+}
+
+[node name="ui" type="Node"]
+script = ExtResource("1_mlqpi")
+
+[node name="Panel" type="Panel" parent="."]
+material = SubResource("CanvasItemMaterial_ylk67")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_75pae")
+expand_mode = 3
+stretch_mode = 6
+flip_h = true
+
+[node name="TextureRect" type="TextureRect" parent="Panel/TextureRect"]
+layout_mode = 0
+offset_left = 441.0
+offset_top = -46.0
+offset_right = 2000.0
+offset_bottom = 344.0
+texture = ExtResource("3_ag8ah")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="TextureRect5" type="TextureRect" parent="Panel/TextureRect"]
+visible = false
+layout_mode = 0
+offset_left = 165.0
+offset_top = 483.0
+offset_right = 1724.0
+offset_bottom = 873.0
+texture = ExtResource("3_ag8ah")
+expand_mode = 3
+stretch_mode = 6
+flip_v = true
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/TextureRect"]
+layout_mode = 0
+offset_left = -1420.0
+offset_top = 200.0
+offset_right = 729.0
+offset_bottom = 356.0
+texture = ExtResource("4_n840h")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Panel/TextureRect"]
+layout_mode = 0
+offset_left = -218.0
+offset_top = 336.0
+offset_right = 1931.0
+offset_bottom = 492.0
+texture = ExtResource("4_n840h")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="Panel/TextureRect"]
+visible = false
+layout_mode = 0
+offset_left = -1790.0
+offset_top = 502.0
+offset_right = 359.0
+offset_bottom = 658.0
+texture = ExtResource("4_n840h")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="Panel/TextureRect"]
+visible = false
+layout_mode = 0
+offset_left = 549.0
+offset_top = 2986.0
+offset_right = 2698.0
+offset_bottom = 3142.0
+rotation = -1.5708
+texture = ExtResource("4_n840h")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Panel/TextureRect"]
+custom_minimum_size = Vector2(400, 150)
+layout_mode = 0
+offset_left = 47.0
+offset_top = 34.0
+offset_right = 745.0
+offset_bottom = 214.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_upc57")
+theme_override_font_sizes/font_size = 120
+text = "PunchLine"
+
+[node name="Label2" type="Label" parent="Panel/TextureRect"]
+layout_mode = 0
+offset_left = 556.0
+offset_top = 34.0
+offset_right = 787.0
+offset_bottom = 214.0
+theme_override_colors/font_color = Color(0.894118, 0.509804, 0.317647, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_upc57")
+theme_override_font_sizes/font_size = 120
+text = "Inc."
+
+[node name="Button" type="Button" parent="Panel/TextureRect"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+offset_left = 23.0
+offset_top = 211.0
+offset_right = 314.0
+offset_bottom = 311.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Panel/TextureRect/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 200.0
+offset_top = -100.0
+offset_right = 490.999
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.894118, 0.509804, 0.317647, 1)
+theme_override_fonts/font = ExtResource("1_upc57")
+theme_override_font_sizes/font_size = 70
+text = "PLAY"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/TextureRect/Button"]
+libraries = {
+"": SubResource("AnimationLibrary_m27xl")
+}
+autoplay = "idle"
+
+[node name="Button2" type="Button" parent="Panel/TextureRect"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+offset_left = 23.0
+offset_top = 350.0
+offset_right = 314.0
+offset_bottom = 450.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Panel/TextureRect/Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.5
+offset_right = 138.0
+offset_bottom = 102.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.894118, 0.509804, 0.317647, 1)
+theme_override_fonts/font = ExtResource("1_upc57")
+theme_override_font_sizes/font_size = 70
+text = "QUIT"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/TextureRect/Button2"]
+libraries = {
+"": SubResource("AnimationLibrary_8xfv2")
+}
+autoplay = "quitidle"
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 1.5
+
+[connection signal="pressed" from="Panel/TextureRect/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/TextureRect/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
