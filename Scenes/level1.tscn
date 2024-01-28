@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cpe5jttgrcodt"]
+[gd_scene load_steps=18 format=3 uid="uid://cpe5jttgrcodt"]
 
 [ext_resource type="Script" path="res://Scenes/level1.gd" id="1_7an04"]
 [ext_resource type="PackedScene" uid="uid://bqpwe2xp6ilu3" path="res://Assets/World/room.glb" id="1_eptot"]
@@ -7,13 +7,15 @@
 [ext_resource type="PackedScene" uid="uid://fhjds856yo2s" path="res://Assets/World/conveyor_belt (1).glb" id="3_lbvlj"]
 [ext_resource type="PackedScene" uid="uid://bc2po731loyp4" path="res://Assets/World/cb_curved.glb" id="4_jnh0f"]
 [ext_resource type="PackedScene" uid="uid://debj5gi2h341s" path="res://Scenes/conveyor.tscn" id="5_dijax"]
+[ext_resource type="PackedScene" uid="uid://ce3cpapou43nf" path="res://Scenes/spawner.tscn" id="5_w7qvo"]
 [ext_resource type="PackedScene" uid="uid://vkgi816ih4i5" path="res://Scenes/box.tscn" id="6_ti7t6"]
-[ext_resource type="PackedScene" uid="uid://uf366rv657r5" path="res://Scenes/playerfat.tscn" id="10_wal5f"]
+[ext_resource type="PackedScene" uid="uid://uf366rv657r5" path="res://Scenes/player3.1.tscn" id="10_wal5f"]
 [ext_resource type="PackedScene" uid="uid://d3fg18fe0ib4n" path="res://Scenes/player2.tscn" id="11_fkbkg"]
-[ext_resource type="PackedScene" uid="uid://5131o4723smh" path="res://Scenes/playerfat2.tscn" id="11_n0bib"]
+[ext_resource type="PackedScene" uid="uid://5131o4723smh" path="res://Scenes/player4.tscn" id="11_n0bib"]
+[ext_resource type="PackedScene" uid="uid://d1faydylpfa4" path="res://Assets/World/word_spawner_tube.glb" id="13_2ps2l"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xofcm"]
-size = Vector3(40, 1, 40)
+size = Vector3(40, 10, 40)
 
 [sub_resource type="BoxMesh" id="BoxMesh_fn1vt"]
 size = Vector3(40, 1, 40)
@@ -22,31 +24,26 @@ size = Vector3(40, 1, 40)
 size = Vector3(1, 39.3602, 38.1467)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p85dc"]
-size = Vector3(1.12842, 1, 1.74078)
+size = Vector3(1.12842, 1.19446, 1.74078)
 
-[node name="Node3D" type="Node3D"]
+[node name="Level1" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0146813, 0, -2.95639e-05)
 script = ExtResource("1_7an04")
-
-[node name="room" parent="." instance=ExtResource("1_eptot")]
-transform = Transform3D(1.19249e-08, 0, -1, 0, 1.48865, 0, 1, 0, 1.19249e-08, -123.386, 8.13001, -16.3542)
 
 [node name="room (1)" parent="." instance=ExtResource("2_vqitv")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 6, -15)
 
+[node name="room" parent="." instance=ExtResource("1_eptot")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1.48865, 0, 1, 0, 1.19249e-08, -123.386, 8.13001, -16.3542)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.6955, 0)
 shape = SubResource("BoxShape3D_xofcm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_fn1vt")
-
-[node name="Player" parent="." instance=ExtResource("2_ey6hc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.07636, 6.36508, 1.63889)
-
-[node name="RemoteTransform3D" type="RemoteTransform3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38995, -0.463122)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.745092, 0.666962, 0, -0.666962, 0.745092, -3.00545, 21.7797, 21.3544)
@@ -73,9 +70,6 @@ transform = Transform3D(0.0402015, 0, 0.999192, 0, 1, 0, -0.999192, 0, 0.0402015
 
 [node name="cb_curved2" parent="." instance=ExtResource("4_jnh0f")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.23931, 1.5, 2.28205)
-
-[node name="cb_curved3" parent="." instance=ExtResource("4_jnh0f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.61458, 1.5, -6.084)
 
 [node name="Conveyor" parent="." instance=ExtResource("5_dijax")]
 transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -13.6954, 2.48121, 10.7233)
@@ -194,10 +188,35 @@ transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -3.577
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82411, -2.71149, 4.18309)
 shape = SubResource("BoxShape3D_gyh82")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Redbox" type="Area3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.69427, 3.18968, -12.8902)
+collision_mask = 4
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Redbox"]
+transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -1.95595, -0.695143, 0.0760307)
+shape = SubResource("BoxShape3D_p85dc")
+
+[node name="Bluebox" type="Area3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.16433, 3.18968, -12.8902)
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bluebox"]
+transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -1.89026, -0.623458, 0.0760312)
+shape = SubResource("BoxShape3D_p85dc")
+
+[node name="Yellowbox" type="Area3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.684146, 3.18968, -12.8902)
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Yellowbox"]
+transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -1.95595, -0.695143, 0.0760307)
+shape = SubResource("BoxShape3D_p85dc")
+
+[node name="Greenbox" type="Area3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.86944, 3.18968, -12.8902)
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Greenbox"]
 transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -1.95595, -0.695143, 0.0760307)
 shape = SubResource("BoxShape3D_p85dc")
 
@@ -210,4 +229,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.78258, 0)
 [node name="Player2" parent="." instance=ExtResource("11_fkbkg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.19668, 4.75213)
 
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[node name="Player" parent="." instance=ExtResource("2_ey6hc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.07636, 6.36508, 1.63889)
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38995, -0.463122)
+
+[node name="Label3D" type="Label3D" parent="Player"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+text = "alaalalallalalalaalal"
+font_size = 128
+
+[node name="Spawner" parent="." instance=ExtResource("5_w7qvo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.92633, 14.1917, 10.7778)
+
+[node name="word_spawner_tube" parent="." instance=ExtResource("13_2ps2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.926, 16.5586, 10.778)
+
+[connection signal="body_entered" from="Redbox" to="." method="_on_redbox_body_entered"]
+[connection signal="body_entered" from="Bluebox" to="." method="_on_bluebox_body_entered"]
+[connection signal="body_entered" from="Yellowbox" to="." method="_on_yellowbox_body_entered"]
+[connection signal="body_entered" from="Greenbox" to="." method="_on_greenbox_body_entered"]

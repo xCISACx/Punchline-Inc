@@ -7,7 +7,6 @@ const global_speed:= 4.5
 @export var bounce_impulse = 10
 var target_velocity = Vector3.ZERO
 var pickedItem : Node = null
-
 @onready var hand: Marker3D = %Hand
 var picked_object
 const global_pull_power: = 40
@@ -21,11 +20,11 @@ const global_pull_power: = 40
 @onready var interaction_5: RayCast3D = %Interaction5
 @onready var interaction_6: RayCast3D = %Interaction6
 @onready var pick_up_area: Area3D = %PickUpArea
-#@onready var global_speed = speed
 @onready var bigode_5: Node3D = %Fatty2
-#@onready var pickable_items: Array[RigidBody3D]
 var controller_index = 0
-#var tween = get_tree().create_tween()
+@onready var give_me_that_fat: AudioStreamPlayer = %GiveMeThatFat
+@onready var jump_smash: AudioStreamPlayer = %JumpSmash
+
 
 
 func _ready():
@@ -90,8 +89,8 @@ func _physics_process(delta):
 				#picked_object.axis_lock_angular_x = true
 				#picked_object.axis_lock_angular_y = true
 				#picked_object.axis_lock_angular_z = true
-				#if picked_object.moving != null:
-					#picked_object.moving = false
+				if picked_object.moving != null:
+					picked_object.moving = false
 
 				bigode_5.animation_player.set_assigned_animation("IDLE2")
 				print ("picked up")
@@ -108,11 +107,11 @@ func _physics_process(delta):
 			await get_tree().create_timer(0.5).timeout
 			pull_power = global_pull_power
 			if picked_object is RigidBody3D:
-				picked_object.apply_central_impulse(knockback*2.5)
+				picked_object.apply_central_impulse(knockback*5*Vector3(5,0,0))
 			drop_object()
 
 	if is_on_floor() and Input.is_action_just_pressed("jump3") and picked_object == null:
-		bigode_5.animation_player.set_assigned_animation("jump3")
+		bigode_5.animation_player.set_assigned_animation("jump")
 		await get_tree().create_timer(0.3).timeout
 		target_velocity.y = jump_impulse
 
@@ -142,10 +141,17 @@ func _physics_process(delta):
 			# we check that we are hitting it from above.
 			if Vector3.UP.dot(collision.get_normal()) > 0.1:
 				# If so, we squash it and bounce.
+				if player.picked_object != null:
+					give_me_that_fat.play()
+				else:
+					jump_smash.play()
+				#self.set_collision_mask_value(4,false)
 				player.squash()
 				player.speed = 0
-				player.set_collision_mask_value(4,false)
+				player.picked_object = null
 				target_velocity.y = bounce_impulse
+				#await get_tree().create_timer(0.5).timeout
+				#self.set_collision_mask_value(4,true)
 				
 				break
 

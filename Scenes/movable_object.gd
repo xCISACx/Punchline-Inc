@@ -18,8 +18,8 @@ func _process(_delta):
 		if is_same_direction(direction, Vector3.ZERO):
 				direction = current_conveyor.direction
 	
-	if target_marker:
-		var target_marker_owner = target_marker.get_owner()
+	#if target_marker:
+		#var target_marker_owner = target_marker.get_owner()
 		#print(
 			#"moving: " + str(moving) +
 			#', direction: ' + str(direction) +
@@ -52,14 +52,14 @@ func move_towards_target(delta):
 			if area.is_in_group("Conveyor Area"):
 				current_conveyor = area.get_owner()
 		
-		print("change direction?")
-		print("current conveyor: " + str(current_conveyor))
+		#print("change direction?")
+		#print("current conveyor: " + str(current_conveyor))
 
 		if !is_same_direction(current_conveyor.direction, direction):
-			print("change direction")
+			#print("change direction")
 			change_direction()
 		else:
-			print("same direction")
+			#print("same direction")
 			moving = true
 			
 func is_same_direction(a: Vector3, b: Vector3) -> bool:
@@ -79,5 +79,5 @@ func change_direction():
 			
 	moving = true
 
-	var target_marker_owner = target_marker.get_owner()
-	print("Changed direction to: " + str(current_conveyor) + ", target_marker_owner: " + str(target_marker_owner))
+	#var target_marker_owner = target_marker.get_owner()
+	#print("Changed direction to: " + str(current_conveyor) + ", target_marker_owner: " + str(target_marker_owner))

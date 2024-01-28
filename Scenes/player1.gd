@@ -25,6 +25,7 @@ const global_pull_power: = 40
 #var tween = get_tree().create_tween()
 @onready var bigode_5: Node3D = %bigodechapel2
 var controller_index = 0
+@onready var dizzy: AudioStreamPlayer = %Dizzy
 
 
 func _ready():
@@ -80,10 +81,11 @@ func _physics_process(delta):
 				var pickable_items = pick_up_area.get_overlapping_bodies()
 				bigode_5.animation_player.set_assigned_animation("pickup")
 				speed = 0
-				await get_tree().create_timer(1).timeout
 				picked_object = pickable_items[0]
+				#await get_tree().create_timer(1).timeout
+				
 				picked_object.set_collision_mask_value(4,false)
-				self.set_collision_mask_value(3,false)
+				#self.set_collision_mask_value(3,false)
 				speed = global_speed
 				anti_rotation_joint.set_node_b(picked_object.get_path())
 				#picked_object.axis_lock_angular_x = true
@@ -163,18 +165,20 @@ func _unhandled_input(_event: InputEvent) -> void:
 
 func drop_object() -> void:
 	if picked_object != null:
-		picked_object.set_collision_mask_value(4,true)
+		#picked_object.set_collision_mask_value(4,true)
 		picked_object = null
 		await get_tree().create_timer(0.5).timeout
-		self.set_collision_mask_value(3,true)
+		#self.set_collision_mask_value(3,true)
 		anti_rotation_joint.set_node_b(anti_rotation_joint.get_path())
 		bigode_5.animation_player.set_assigned_animation("idle")
 		print("dropped object")
 
 
 func squash() -> void:
-	speed = 4
+	speed = 0
 	bigode_5.kill()
 	print("squashed")
-	await get_tree().create_timer(1).timeout
+	dizzy.play()
+	await get_tree().create_timer(1.5).timeout
+	
 	speed = global_speed

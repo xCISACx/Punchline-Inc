@@ -1,8 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://vkgi816ih4i5"]
+[gd_scene load_steps=5 format=3 uid="uid://vkgi816ih4i5"]
 
 [ext_resource type="Script" path="res://Scenes/movable_object.gd" id="1_gi000"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ncqcw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nlrn1"]
 size = Vector3(0.3, 0.2, 1)
@@ -17,8 +15,10 @@ size = Vector3(0.25, 0.25, 0.25)
 [node name="Box" type="RigidBody3D" groups=["Movable"]]
 collision_layer = 4
 collision_mask = 7
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
 mass = 0.2
-physics_material_override = SubResource("PhysicsMaterial_ncqcw")
 freeze_mode = 1
 continuous_cd = true
 script = ExtResource("1_gi000")

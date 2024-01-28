@@ -24,7 +24,7 @@ func _on_area_3d_body_entered(body):
 		#print("this should only run once")
 	#body.target_point = target
 	#body.direction = transform.basis.z
-	print(body.name + ": " + str(body.current_conveyor))
+	#print(body.name + ": " + str(body.current_conveyor))
 	
 	#if body.is_in_group("Movable"):
 		#body.direction = ($Target.position - body.position).normalized()
@@ -36,7 +36,7 @@ func _on_area_3d_body_entered(body):
 	#body.move(transform.basis.z)
 
 
-func _on_area_3d_body_exited(body):
-	print(name + " body exited: " + body.name)
+func _on_area_3d_body_exited(_body):
+	#print(name + " body exited: " + body.name)
 	#body.moving = false
 	pass # Replace with function body.

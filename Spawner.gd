@@ -8,7 +8,7 @@ func _ready() -> void:
 func spawn():
 	var spawned_scene = spawnable.instantiate()
 	add_child(spawned_scene)
-	spawned_scene.position = self.global_position
+	spawned_scene.global_position = self.global_position
 
 
 func _on_timer_timeout() -> void:

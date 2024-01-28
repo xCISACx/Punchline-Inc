@@ -8,6 +8,7 @@ script = ExtResource("1_8y0ms")
 spawnable = ExtResource("2_0oq11")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
