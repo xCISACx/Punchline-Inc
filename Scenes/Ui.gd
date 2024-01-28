@@ -2,7 +2,9 @@ extends Node
 
 @onready var button: Button = $Panel/TextureRect/Button
 @onready var timer: Timer = %Timer
+@onready var timer2: Timer = %Timer2
 @onready var button_2: Button = %Button2
+@export var game_scene : PackedScene
 
 
 
@@ -27,8 +29,13 @@ func _on_button_pressed() -> void:
 
 func _on_button_2_pressed() -> void:
 	button_2.get_node("AnimationPlayer").play("quit_animation")
-	timer.start()
+	timer2.start()
 
 func _on_timer_timeout() -> void:
 	print("load game")
+	get_tree().change_scene_to_packed(game_scene)
 
+
+
+func _on_timer_2_timeout() -> void:
+	get_tree().quit()

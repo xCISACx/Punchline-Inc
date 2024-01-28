@@ -1,8 +1,8 @@
+AudioStreamPlayer
 Timer
 TextureRect
 Label3D
 Label
-AudioStreamPlayer
 Panel
 Node3D
 HBoxContainer
@@ -12,4 +12,3 @@ TextEdit
 Control
 CollisionShape3D
 Area3D
-MeshInstance3D
