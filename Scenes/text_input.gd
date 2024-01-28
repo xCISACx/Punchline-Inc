@@ -43,9 +43,10 @@ func create_word_list():
 	var f = FileAccess.open(words, FileAccess.READ)
 	var index = 0
 	while not f.eof_reached():
-		var line = f.get_line()
-		word_list.append(line)
-		index += 1
+		var line = f.get_line().strip_edges()
+		if line.length() > 0:
+			word_list.append(line)
+			index += 1
 	f.close()
 	
 func populate_submission_buttons():

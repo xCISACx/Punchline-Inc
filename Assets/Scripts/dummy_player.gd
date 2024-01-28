@@ -17,11 +17,11 @@ func generate_words():
 		for i in range(collected_words.size()):
 			var random_index = randi_range(0, $"..".word_list.size() - 1)
 			var word = $"..".word_list[random_index]
-			word = word.strip_edges()  # Assign the stripped word back to the variable
 			if word.length() > 0:
-				print(word)
 				collected_words[i] = word
 				$"..".word_list.erase(word)
 				$"..".used_words_list.append(word)
 			else:
+				print("Empty word encountered!")
 				i -= 1  # Retry with a different word index
+ 

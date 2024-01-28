@@ -25,7 +25,7 @@ winning_player_label = NodePath("Control/MainJokeContainer/AnswerCardMainContain
 winner_label = NodePath("Control/WinnerLabel")
 player_labels_container = NodePath("Control/MainJokeContainer/SubmissionContainer/PlayerLabelsContainer")
 player_list = [NodePath("Node3D"), NodePath("Node3D2"), NodePath("Node3D3"), NodePath("Node3D4")]
-words = "res://Assets/Scripts/my_words.txt"
+words = "res://Assets/Text/words_updated.txt"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
