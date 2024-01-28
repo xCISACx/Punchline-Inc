@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cpe5jttgrcodt"]
+[gd_scene load_steps=24 format=3 uid="uid://cpe5jttgrcodt"]
 
 [ext_resource type="Script" path="res://Scenes/level1.gd" id="1_7an04"]
 [ext_resource type="PackedScene" uid="uid://bqpwe2xp6ilu3" path="res://Assets/World/room.glb" id="1_eptot"]
@@ -13,9 +13,13 @@
 [ext_resource type="PackedScene" uid="uid://d3fg18fe0ib4n" path="res://Scenes/player2.tscn" id="11_fkbkg"]
 [ext_resource type="PackedScene" uid="uid://5131o4723smh" path="res://Scenes/player4.tscn" id="11_n0bib"]
 [ext_resource type="PackedScene" uid="uid://d1faydylpfa4" path="res://Assets/World/word_spawner_tube.glb" id="13_2ps2l"]
+[ext_resource type="PackedScene" uid="uid://frwifsx5kwob" path="res://Assets/World/room (2).glb" id="14_hvssl"]
+[ext_resource type="PackedScene" uid="uid://cal6k8ank41up" path="res://Assets/World/box1yellow.glb" id="15_t3jas"]
+[ext_resource type="PackedScene" uid="uid://csdv5gq1t4m5v" path="res://Assets/World/box2violet.glb" id="16_mnclo"]
+[ext_resource type="PackedScene" uid="uid://wxqrqq7kyn16" path="res://Assets/World/box3blue.glb" id="17_ihgfc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xofcm"]
-size = Vector3(40, 10, 40)
+size = Vector3(60, 10, 40)
 
 [sub_resource type="BoxMesh" id="BoxMesh_fn1vt"]
 size = Vector3(40, 1, 40)
@@ -26,12 +30,18 @@ size = Vector3(1, 39.3602, 38.1467)
 [sub_resource type="BoxShape3D" id="BoxShape3D_p85dc"]
 size = Vector3(1.12842, 1.19446, 1.74078)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_u7c2v"]
+size = Vector3(1.65283, 3.31305, 1.73877)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pgann"]
+size = Vector3(1.96594, 2.0686, 1.97412)
+
 [node name="Level1" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0146813, 0, -2.95639e-05)
 script = ExtResource("1_7an04")
 
 [node name="room (1)" parent="." instance=ExtResource("2_vqitv")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 6, -15)
+transform = Transform3D(-4.37114e-08, 0, -1, -0.0154107, 0.999881, 6.73621e-10, 0.999881, 0.0154107, -4.37062e-08, 52.9567, 6, -15)
 
 [node name="room" parent="." instance=ExtResource("1_eptot")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1.48865, 0, 1, 0, 1.19249e-08, -123.386, 8.13001, -16.3542)
@@ -51,104 +61,199 @@ fov = 50.0
 size = 20.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.99688, 0.0789289, 0, -0.0789289, -0.99688, 0, 0, 0, 1, -5.34007, 27.1969, 0)
+transform = Transform3D(-0.99688, 0.0789289, -2.51127e-16, 3.45009e-09, 4.3575e-08, 1, 0.0789289, 0.99688, -4.37114e-08, -5.34007, 27.1969, 4.3335)
 
 [node name="conveyor_belt (1)" parent="." instance=ExtResource("3_lbvlj")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12.2923, 1.5, 10.7206)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.5191, 0.695845, 0.707966)
 
 [node name="conveyor_belt (1)2" parent="." instance=ExtResource("3_lbvlj")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.872, 1.5, 10.7202)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.0988, 0.695845, 0.707565)
 
 [node name="conveyor_belt (1)3" parent="." instance=ExtResource("3_lbvlj")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.205, 1.5, 10.7202)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12.4318, 0.695845, 0.707565)
 
 [node name="conveyor_belt (1)4" parent="." instance=ExtResource("3_lbvlj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29547, 1.5, 6.3652)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93131, 0.695845, -3.64743)
+
+[node name="conveyor_belt (1)5" parent="." instance=ExtResource("3_lbvlj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93131, 0.695845, -6.57435)
+
+[node name="conveyor_belt (1)6" parent="." instance=ExtResource("3_lbvlj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12.4374, 0.695845, -10.9985)
 
 [node name="cb_curved" parent="." instance=ExtResource("4_jnh0f")]
-transform = Transform3D(0.0402015, 0, 0.999192, 0, 1, 0, -0.999192, 0, 0.0402015, 1.232, 1.5, 10.9897)
+transform = Transform3D(0.0402015, 0, 0.999192, 0, 1, 0, -0.999192, 0, 0.0402015, -7.99478, 0.695845, 0.811316)
 
 [node name="cb_curved2" parent="." instance=ExtResource("4_jnh0f")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.23931, 1.5, 2.28205)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -7.98747, 0.695845, -10.9876)
 
 [node name="Conveyor" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -13.6954, 2.48121, 10.7233)
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -22.8247, 1.7005, 0.52459)
 visible = false
 
 [node name="Conveyor2" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -12.6954, 2.48121, 10.7233)
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -21.8247, 1.7005, 0.52459)
 visible = false
 
 [node name="Conveyor3" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -11.6954, 2.48121, 10.7233)
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -20.8247, 1.7005, 0.52459)
 visible = false
 
 [node name="Conveyor4" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -10.6954, 2.48121, 10.7233)
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -19.8247, 1.7005, 0.52459)
 visible = false
 
 [node name="Conveyor5" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -9.69544, 2.48121, 10.7233)
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -18.8248, 1.7005, 0.52459)
 visible = false
 
 [node name="Conveyor6" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -8.69544, 2.48121, 10.7233)
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -17.8248, 1.7005, 0.52459)
 visible = false
 
 [node name="Conveyor7" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -7.69544, 2.48121, 10.7233)
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -16.8248, 1.7005, 0.52459)
 visible = false
 
 [node name="Conveyor8" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -6.69544, 2.48121, 10.7233)
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -15.8248, 1.7005, 0.52459)
 visible = false
 
 [node name="Conveyor9" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -5.69544, 2.48121, 10.7233)
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -14.8248, 1.7005, 0.52459)
 visible = false
 
 [node name="Conveyor10" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -4.69544, 2.48121, 10.7233)
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -13.8248, 1.7005, 0.52459)
 visible = false
 
 [node name="Conveyor11" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -3.61634, 2.48121, 10.7233)
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -12.7457, 1.7005, 0.52459)
 visible = false
 
 [node name="Conveyor12" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -2.69544, 2.48121, 10.7233)
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -11.8248, 1.7005, 0.52459)
 visible = false
 
 [node name="Conveyor13" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -1.69544, 2.48121, 10.7233)
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -10.8248, 1.7005, 0.52459)
 visible = false
 
 [node name="Conveyor14" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -0.695439, 2.48121, 10.7233)
+transform = Transform3D(-9.93477e-08, 0, 1, 0, 1.48865, 0, -1, 0, -9.93477e-08, -9.82477, 1.7005, 0.52459)
+visible = false
 
 [node name="Conveyor15" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-0.754595, 0, 0.656191, 0, 1.48865, 0, -0.656191, 0, -0.754595, 0.304561, 2.48121, 10.7233)
+transform = Transform3D(-0.754595, 0, 0.656191, 0, 1.48865, 0, -0.656191, 0, -0.754595, -8.82477, 1.7005, 0.52459)
+visible = false
 
 [node name="Conveyor16" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-0.866025, 0, 0.5, 0, 1.48865, 0, -0.5, 0, -0.866025, 0.949394, 2.48121, 9.90254)
+transform = Transform3D(-0.866025, 0, 0.5, 0, 1.48865, 0, -0.5, 0, -0.866025, -8.17994, 1.7005, -0.296169)
+visible = false
 
 [node name="Conveyor17" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, 1.22327, 2.48121, 8.89321)
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, -7.90606, 1.7005, -1.3055)
+visible = false
 
 [node name="Conveyor18" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, 1.22327, 2.48121, 7.89929)
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, -7.90606, 1.7005, -2.29942)
+visible = false
 
 [node name="Conveyor19" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, 1.22327, 2.48121, 6.93165)
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, -7.90606, 1.7005, -3.26706)
+visible = false
 
 [node name="Conveyor20" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, 1.22327, 2.48121, 5.93494)
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, -7.90606, 1.7005, -4.26377)
+visible = false
 
 [node name="Conveyor21" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, 1.22327, 2.48121, 4.93562)
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, -7.90606, 1.7005, -5.26309)
+visible = false
+
+[node name="Conveyor25" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, -7.90606, 1.7005, -8.70881)
+visible = false
+
+[node name="Conveyor26" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, -7.90606, 1.7005, -7.75944)
+visible = false
+
+[node name="Conveyor27" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, -7.90606, 1.7005, -6.75445)
+visible = false
+
+[node name="Conveyor28" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, -7.90606, 1.7005, -6.08903)
+visible = false
 
 [node name="Conveyor22" parent="." instance=ExtResource("5_dijax")]
-transform = Transform3D(-1, 0, -1.19209e-07, 0, 1.48865, 0, 1.19209e-07, 0, -1, 1.22327, 2.48121, 3.94831)
+transform = Transform3D(-0.841398, 0, -0.540417, 0, 1.48865, 0, 0.540417, 0, -0.841398, -8.08125, 1.7005, -9.80442)
+visible = false
+
+[node name="Conveyor23" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(-0.375998, 0, -0.926621, 0, 1.48865, 0, 0.926621, 0, -0.375998, -8.67965, 1.7005, -10.7624)
+visible = false
+
+[node name="Conveyor24" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(1.6292e-07, 0, -1, 0, 1.48865, 0, 1, 0, 1.6292e-07, -11.1098, 1.7005, -10.9513)
+visible = false
+
+[node name="Conveyor30" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(0.013369, 0, -0.999911, 0, 1.48865, 0, 0.999911, 0, 0.013369, -9.60782, 1.7005, -10.9614)
+visible = false
+
+[node name="Conveyor31" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(0.013369, 0, -0.999911, 0, 1.48865, 0, 0.999911, 0, 0.013369, -9.53891, 1.7005, -14.0244)
+visible = false
+
+[node name="Conveyor32" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(0.013369, 0, -0.999911, 0, 1.48865, 0, 0.999911, 0, 0.013369, -11.6078, 1.7005, -10.994)
+visible = false
+
+[node name="Conveyor33" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(0.013369, 0, -0.999911, 0, 1.48865, 0, 0.999911, 0, 0.013369, -12.6078, 1.7005, -10.994)
+visible = false
+
+[node name="Conveyor34" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(0.013369, 0, -0.999911, 0, 1.48865, 0, 0.999911, 0, 0.013369, -13.6078, 1.7005, -10.994)
+visible = false
+
+[node name="Conveyor35" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(0.013369, 0, -0.999911, 0, 1.48865, 0, 0.999911, 0, 0.013369, -14.6078, 1.7005, -10.994)
+visible = false
+
+[node name="Conveyor36" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(0.013369, 0, -0.999911, 0, 1.48865, 0, 0.999911, 0, 0.013369, -15.6078, 1.7005, -10.994)
+visible = false
+
+[node name="Conveyor37" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(0.013369, 0, -0.999911, 0, 1.48865, 0, 0.999911, 0, 0.013369, -16.6078, 1.7005, -10.994)
+visible = false
+
+[node name="Conveyor38" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(0.013369, 0, -0.999911, 0, 1.48865, 0, 0.999911, 0, 0.013369, -17.6078, 1.7005, -10.994)
+visible = false
+
+[node name="Conveyor39" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(0.013369, 0, -0.999911, 0, 1.48865, 0, 0.999911, 0, 0.013369, -18.6078, 1.7005, -10.994)
+visible = false
+
+[node name="Conveyor40" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(0.013369, 0, -0.999911, 0, 1.48865, 0, 0.999911, 0, 0.013369, -19.6078, 1.7005, -10.994)
+visible = false
+
+[node name="Conveyor41" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(0.013369, 0, -0.999911, 0, 1.48865, 0, 0.999911, 0, 0.013369, -20.6078, 1.7005, -10.994)
+visible = false
+
+[node name="Conveyor42" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(0.013369, 0, -0.999911, 0, 1.48865, 0, 0.999911, 0, 0.013369, -21.6078, 1.7005, -10.994)
+visible = false
+
+[node name="Conveyor43" parent="." instance=ExtResource("5_dijax")]
+transform = Transform3D(0.013369, 0, -0.999911, 0, 1.48865, 0, 0.999911, 0, 0.013369, -22.6078, 1.7005, -10.994)
+visible = false
 
 [node name="Box" parent="." instance=ExtResource("6_ti7t6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 4, 5.95898)
@@ -157,11 +262,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 4, 5.95898)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.036, 9.73716, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LeftWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82411, -0.787109, 1.67524)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.17589, -0.787109, 1.67524)
 shape = SubResource("BoxShape3D_gyh82")
 
 [node name="BackWall" type="StaticBody3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.80236, 11.1933, -12.6104)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.80236, 11.1933, -14.7054)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BackWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82411, -0.787109, 1.67524)
@@ -178,7 +283,7 @@ shape = SubResource("BoxShape3D_gyh82")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.34698, 9.73716, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RightWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82411, -0.787109, 1.67524)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.11, -0.787109, 1.67524)
 shape = SubResource("BoxShape3D_gyh82")
 
 [node name="Ceiling" type="StaticBody3D" parent="."]
@@ -193,7 +298,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.694
 collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Redbox"]
-transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -1.95595, -0.695143, 0.0760307)
+transform = Transform3D(0.804458, 0.594009, 8.54741e-09, -0.594009, 0.804458, 2.5965e-08, 8.54742e-09, -2.5965e-08, 1, -3.35562, -1.08924, 0.109299)
 shape = SubResource("BoxShape3D_p85dc")
 
 [node name="Bluebox" type="Area3D" parent="."]
@@ -201,7 +306,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.164
 collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bluebox"]
-transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -1.89026, -0.623458, 0.0760312)
+transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -3.39212, -1.034, 0.0760314)
 shape = SubResource("BoxShape3D_p85dc")
 
 [node name="Yellowbox" type="Area3D" parent="."]
@@ -209,7 +314,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.684
 collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Yellowbox"]
-transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -1.95595, -0.695143, 0.0760307)
+transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -3.59727, -1.14514, 0.0760308)
 shape = SubResource("BoxShape3D_p85dc")
 
 [node name="Greenbox" type="Area3D" parent="."]
@@ -217,7 +322,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.8694
 collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Greenbox"]
-transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -1.95595, -0.695143, 0.0760307)
+transform = Transform3D(0.737277, 0.67559, 1.1484e-08, -0.67559, 0.737277, 2.9531e-08, 1.1484e-08, -2.9531e-08, 1, -3.42987, -1.07761, 0.0760307)
 shape = SubResource("BoxShape3D_p85dc")
 
 [node name="Player3" parent="." instance=ExtResource("10_wal5f")]
@@ -230,24 +335,67 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.78258, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.19668, 4.75213)
 
 [node name="Player" parent="." instance=ExtResource("2_ey6hc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.07636, 6.36508, 1.63889)
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.74291, 1.18302, 1.63889)
 
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38995, -0.463122)
 
-[node name="Label3D" type="Label3D" parent="Player"]
+[node name="Label3D2" type="Label3D" parent="Player"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+visible = false
 text = "alaalalallalalalaalal"
 font_size = 128
 
 [node name="Spawner" parent="." instance=ExtResource("5_w7qvo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.92633, 14.1917, 10.7778)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1157, 14.1917, 0.263554)
 
 [node name="word_spawner_tube" parent="." instance=ExtResource("13_2ps2l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.926, 16.5586, 10.778)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.3722, 11.9692, 0.178205)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -23.2005, 1.56236, -10.7537)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.326416, 1.15652, -0.125854)
+shape = SubResource("BoxShape3D_u7c2v")
+
+[node name="room (2)" parent="." instance=ExtResource("14_hvssl")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.99002, 5.12193, -17.1505)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.1032, 1.78838, 2.79152)
+collision_mask = 13
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0115356, 0.0159912, 0.029541)
+shape = SubResource("BoxShape3D_pgann")
+
+[node name="box1yellow" parent="RigidBody3D" instance=ExtResource("15_t3jas")]
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4268, 1.78838, 2.79152)
+collision_mask = 13
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0115356, 0.0159912, 0.029541)
+shape = SubResource("BoxShape3D_pgann")
+
+[node name="box2violet" parent="RigidBody3D2" instance=ExtResource("16_mnclo")]
+
+[node name="RigidBody3D3" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.49271, 1.78838, -15.8638)
+collision_mask = 13
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0115356, 0.0159912, 0.029541)
+shape = SubResource("BoxShape3D_pgann")
+
+[node name="box3blue" parent="RigidBody3D3" instance=ExtResource("17_ihgfc")]
 
 [connection signal="body_entered" from="Redbox" to="." method="_on_redbox_body_entered"]
 [connection signal="body_entered" from="Bluebox" to="." method="_on_bluebox_body_entered"]
 [connection signal="body_entered" from="Yellowbox" to="." method="_on_yellowbox_body_entered"]
 [connection signal="body_entered" from="Greenbox" to="." method="_on_greenbox_body_entered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

@@ -107,4 +107,10 @@ shape = SubResource("CylinderShape3D_25j7v")
 unique_name_in_owner = true
 stream = ExtResource("4_trnng")
 
+[node name="Label3D" type="Label3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.31749, 0)
+text = "euhgfeahgfiuaergoerug"
+font_size = 120
+
 [connection signal="body_entered" from="Pivot/PickUpArea" to="." method="_on_area_3d_body_entered"]

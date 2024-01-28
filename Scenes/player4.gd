@@ -87,8 +87,8 @@ func _physics_process(delta):
 				#picked_object.axis_lock_angular_x = true
 				#picked_object.axis_lock_angular_y = true
 				#picked_object.axis_lock_angular_z = true
-				#if picked_object.moving != null:
-					#picked_object.moving = false
+				if picked_object.moving != null:
+					picked_object.moving = false
 
 				bigode_5.animation_player.set_assigned_animation("IDLE2")
 				print ("picked up")

@@ -77,9 +77,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.004
 
 [node name="Box" parent="." instance=ExtResource("2_4q77w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.94108, 2.40031, -10.2379)
-axis_lock_angular_x = true
-axis_lock_angular_y = true
-axis_lock_angular_z = true
 
 [node name="Box2" parent="." instance=ExtResource("2_4q77w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.59693, 2.40031, -0.97637)

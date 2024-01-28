@@ -26,6 +26,7 @@ const global_pull_power: = 40
 @onready var bigode_5: Node3D = %bigodechapel2
 var controller_index = 0
 @onready var dizzy: AudioStreamPlayer = %Dizzy
+@onready var label: Label3D = %Label3D
 
 
 func _ready():
@@ -33,6 +34,8 @@ func _ready():
 
 
 func _physics_process(delta):
+	if position.y <=0.9:
+		position = Vector3(2,2,2)
 	bigode_5.animation_player.play()
 	if velocity.y < 0:
 		bigode_5.animation_player.set_assigned_animation("air")
@@ -93,11 +96,13 @@ func _physics_process(delta):
 				#picked_object.axis_lock_angular_z = true
 				if picked_object.moving != null:
 					picked_object.moving = false
-
 				bigode_5.animation_player.set_assigned_animation("idle2")
 				print ("picked up")
+				break
+
 			elif picked_object != null:
 				drop_object()
+				break
 
 	if Input.is_action_just_pressed("throw"):
 		if picked_object != null:
@@ -114,6 +119,7 @@ func _physics_process(delta):
 		bigode_5.animation_player.set_assigned_animation("jump1")
 		await get_tree().create_timer(0.1).timeout
 		target_velocity.y = jump_impulse
+		
 
 	if direction != Vector3.ZERO and bigode_5.animation_player.get_assigned_animation()\
 		!= "pickup":
@@ -126,8 +132,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
 
-	velocity = target_velocity
-	move_and_slide()
+
 
 	for index in range(get_slide_collision_count()):
 		
@@ -146,9 +151,12 @@ func _physics_process(delta):
 				player.picked_object = null
 				player.set_collision_mask_value(4,false)
 				target_velocity.y = bounce_impulse
-				
+				target_velocity.z = 100
+				target_velocity.x = 100  
 				break
 
+	velocity = target_velocity
+	move_and_slide()
 	if picked_object != null:
 
 		var a = picked_object.global_transform.origin

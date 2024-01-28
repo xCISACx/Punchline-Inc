@@ -97,20 +97,20 @@ func _physics_process(delta):
 			elif picked_object != null:
 				
 				drop_object()
+#
+	#if Input.is_action_just_pressed("throw3"):
+		#if picked_object != null:
+			#var knockback = picked_object.global_position - self.global_position
+			#bigode_5.animation_player.set_assigned_animation("Action")
+			##pull_power = 0
+			##picked_object.position.y += 1
+			#await get_tree().create_timer(0.5).timeout
+			#pull_power = global_pull_power
+			#if picked_object is RigidBody3D:
+				#picked_object.apply_central_impulse(knockback*5*Vector3(5,0,0))
+			#drop_object()
 
-	if Input.is_action_just_pressed("throw3"):
-		if picked_object != null:
-			var knockback = picked_object.global_position - self.global_position
-			bigode_5.animation_player.set_assigned_animation("Action")
-			#pull_power = 0
-			#picked_object.position.y += 1
-			await get_tree().create_timer(0.5).timeout
-			pull_power = global_pull_power
-			if picked_object is RigidBody3D:
-				picked_object.apply_central_impulse(knockback*5*Vector3(5,0,0))
-			drop_object()
-
-	if is_on_floor() and Input.is_action_just_pressed("jump3") and picked_object == null:
+	if is_on_floor() and Input.is_action_just_pressed("jump3"):
 		bigode_5.animation_player.set_assigned_animation("jump")
 		await get_tree().create_timer(0.3).timeout
 		target_velocity.y = jump_impulse
